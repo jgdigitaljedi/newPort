@@ -9,7 +9,7 @@ angular.module(ApplicationConfiguration.applicationModuleName).config(['$locatio
 		$locationProvider.html5Mode({enabled: true, requireBase: false}).hashPrefix('!');
 
 	$mdThemingProvider.theme('default')
-            .primaryPalette('blue-grey')
+            .primaryPalette('blue-grey').dark()
             .accentPalette('deep-orange');
  
         // Register the user `avatar` icons
