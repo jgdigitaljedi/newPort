@@ -8,3 +8,5 @@ app/tests/coverage/
 .bower-*/
 .idea/
 mongod.lock
+journal/
+app/controllers/proxy.controller.js
