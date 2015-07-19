@@ -1,9 +1,13 @@
 <div class="big-flat-header" data-ng-controller="HeaderController" flex>
-    <md-toolbar layout="row" data-ng-controller="HomeController as ul">
-        <md-button class="menu" hide-gt-sm ng-click="ul.toggleList()" aria-label="Show User List">
-            <md-icon md-svg-icon="menu" ></md-icon>
-        </md-button>
-        <h1 class="my-name">Joey Gauthier {{currentTemp}}</h1>
+    <md-toolbar layout="row">
+    	<div flex>
+        	<h1 class="my-name">Joey Gauthier</h1>
+		</div>
+		<div flex>
 
+		</div>
+		<div flex>
+			<h1 class="the-weather">{{userCity}}: {{currentTemp}}&deg;f </h1><img class="current-weather-icon" ng-src="{{geoIcon}}" />
+		</div>
     </md-toolbar>
 </div>
