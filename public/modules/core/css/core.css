@@ -1,15 +1,11 @@
-.content {
-	margin-top: 50px;
+.md-toolbar-tools h1 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: inherit;
 }
-.undecorated-link:hover {
-	text-decoration: none;
-}
-[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-	display: none !important;
-}
-.ng-invalid.ng-dirty {
-	border-color: #FA787E;
-}
-.ng-valid.ng-dirty {
-	border-color: #78FA89;
+
+.md-toolbar-tools h1 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: inherit;
 }
