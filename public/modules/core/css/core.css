@@ -4,10 +4,26 @@
   font-weight: inherit;
   display: inline-block;
 }
+.big-flat-header #weather-container {
+  text-align: right;
+}
 .big-flat-header .current-weather-icon {
   height: 40px;
   display: inline-block;
   margin: 5px 0 -13px;
+}
+#home-section #main-content {
+  background-image: url('/assets/images/AustinSkylineCropped.png');
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+md-sidenav,
+md-sidenav.md-locked-open,
+md-sidenav.md-closed.md-locked-open-add-active {
+  min-width: 0px !important;
+  width: 200px !important;
+  max-width: none !important;
 }
 
 .big-flat-header h1 {
@@ -16,8 +32,24 @@
   font-weight: inherit;
   display: inline-block;
 }
+.big-flat-header #weather-container {
+  text-align: right;
+}
 .big-flat-header .current-weather-icon {
   height: 40px;
   display: inline-block;
   margin: 5px 0 -13px;
+}
+#home-section #main-content {
+  background-image: url('/assets/images/AustinSkylineCropped.png');
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+md-sidenav,
+md-sidenav.md-locked-open,
+md-sidenav.md-closed.md-locked-open-add-active {
+  min-width: 0px !important;
+  width: 200px !important;
+  max-width: none !important;
 }

@@ -8,6 +8,7 @@ angular.module('core').factory('Geolocateme', ['$rootScope',
 				function getLocation(location) {
 				    	$rootScope.currentLocale = {'latitude': location.coords.latitude, 'longitude': location.coords.longitude, 'accuracy': location.coords.accuracy, 'error': 'none'};
 						$rootScope.$broadcast('locationIsSet');
+						sessionStorage.setItem('geoLocation', JSON.stringify($rootScope.currentLocale));
 				}
 
 				function localeDenied(error) {
@@ -16,7 +17,7 @@ angular.module('core').factory('Geolocateme', ['$rootScope',
 				    $rootScope.$broadcast('locationDenied');
 				}
 
-				if (navigator.geolocation) {
+				if (navigator.geolocation ) {
 					navigator.geolocation.getCurrentPosition(getLocation, localeDenied);
 				} else {
 					$rootScope.currentLocale = {'latitude': 'not supported', 'longitude': 'not supported', 'accuracy': 'not supported', 'error': 'not supported'};

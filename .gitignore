@@ -8,5 +8,10 @@ app/tests/coverage/
 .bower-*/
 .idea/
 mongod.lock
+/journal/
 journal/
+newportfolio-dev.0
+local.0
+local.ns
+newportfolio-dev.ns
 app/controllers/proxy.controller.js

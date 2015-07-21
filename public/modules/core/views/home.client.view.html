@@ -1,7 +1,7 @@
-<div flex layout="row" data-ng-controller="HomeController as ul">
+<div flex layout="row" id="home-section" data-ng-controller="HomeController">
  
     <!-- Container #3 Left -->
-    <md-sidenav md-is-locked-open="$mdMedia('gt-sm')" md-component-id="left" class="md-whiteframe-z2">
+    <md-sidenav md-is-locked-open="true" md-component-id="left" class="md-primary md-hue-2">
         <md-list>
             <!-- <md-item ng-repeat="it in ul.users">
                 <md-button ng-click="ul.selectUser(it)"
@@ -10,19 +10,23 @@
                     {{it.name}}
                 </md-button>
             </md-item> -->
+            <md-item><h1 class="md-accent">Welcome!</h1></md-item>
+            <hr>
+            <md-item><h1 class="md-accent">Bio</h1></md-item>
+            <hr>
+            <md-item><h1 class="md-accent">Projects</h1></md-item>
+            <hr>
+            <md-item><h1 class="md-accent">Resume</h1></md-item>
+            <hr>
+            <md-item><h1 class="md-accent">Contact Me</h1></md-item>
+            <hr>
+            <md-item><h1 class="md-accent">Just for Fun</h1></md-item>
+
         </md-list>
     </md-sidenav>
  
     <!-- Container #4 Right -->
-    <md-content flex id="content">
-        <!-- User details sample -->
-        <!-- <md-icon md-svg-icon="{{ul.selected.avatar}}" class="avatar"></md-icon>
-        <h2>{{ul.selected.name}}</h2>
-        <p>{{ul.selected.content}}</p> -->
- 
-        <md-button class="share" md-no-ink ng-click="ul.share($event)"
-                   aria-label="Share">
-            <md-icon md-svg-icon="share" ></md-icon>
-        </md-button>
+    <md-content flex id="main-content">
+
     </md-content>
 </div>
