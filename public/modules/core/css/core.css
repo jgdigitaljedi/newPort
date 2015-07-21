@@ -25,6 +25,10 @@ md-sidenav.md-closed.md-locked-open-add-active {
   width: 200px !important;
   max-width: none !important;
 }
+.sidenav-option {
+  color: #80deea;
+  margin-left: 18px;
+}
 
 .big-flat-header h1 {
   margin-left: 10px;
@@ -52,4 +56,8 @@ md-sidenav.md-closed.md-locked-open-add-active {
   min-width: 0px !important;
   width: 200px !important;
   max-width: none !important;
+}
+.sidenav-option {
+  color: #80deea;
+  margin-left: 18px;
 }

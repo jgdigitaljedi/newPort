@@ -10,7 +10,7 @@ angular.module(ApplicationConfiguration.applicationModuleName).config(['$locatio
 
 	$mdThemingProvider.theme('default')
             .primaryPalette('blue-grey').dark()
-            .accentPalette('deep-orange');
+            .accentPalette('cyan');
  
         // Register the user `avatar` icons
         $mdIconProvider
