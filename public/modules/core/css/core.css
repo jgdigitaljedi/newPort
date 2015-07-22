@@ -3,6 +3,7 @@
   font-size: inherit;
   font-weight: inherit;
   display: inline-block;
+  font-family: 'Signika';
 }
 .big-flat-header #weather-container {
   text-align: right;
@@ -28,13 +29,16 @@ md-sidenav.md-closed.md-locked-open-add-active {
 .sidenav-option {
   color: #80deea;
   margin-left: 18px;
+  font-family: 'Signika';
 }
 
+@import url('http://fonts.googleapis.com/css?family=Viga|Signika');
 .big-flat-header h1 {
   margin-left: 10px;
   font-size: inherit;
   font-weight: inherit;
   display: inline-block;
+  font-family: 'Signika';
 }
 .big-flat-header #weather-container {
   text-align: right;
@@ -60,4 +64,5 @@ md-sidenav.md-closed.md-locked-open-add-active {
 .sidenav-option {
   color: #80deea;
   margin-left: 18px;
+  font-family: 'Signika';
 }

@@ -24,9 +24,26 @@
 
         </md-list>
     </md-sidenav>
- 
-    <!-- Container #4 Right -->
     <md-content flex id="main-content">
-
+		<div class="lock-size" layout="row" layout-align="end center">
+		    <md-fab-speed-dial md-open="socialFab.isOpen" md-direction="{{socialFab.selectedDirection}}" ng-class="socialFab.selectedMode">
+		       	<md-fab-trigger>
+		         	<md-button aria-label="menu" class="md-fab md-accent">
+		           		<md-icon md-svg-icon="menu"></md-icon>
+		         	</md-button>
+		       	</md-fab-trigger>
+		       	<md-fab-actions>
+		         	<md-button aria-label="twitter" class="md-fab md-raised md-mini" href="http://www.twitter.com/jgdigitaljedi">
+		           		<md-icon md-svg-icon="twitter"></md-icon>
+		         	</md-button>
+		         	<md-button aria-label="google_plus" class="md-fab md-raised md-mini">
+		           		<md-icon md-svg-icon="google_plus"></md-icon>
+		         	</md-button>
+		         	<md-button aria-label="Google hangout" class="md-fab md-raised md-mini">
+		           		<md-icon md-svg-src="img/icons/hangout.svg"></md-icon>
+		         	</md-button>
+		       </md-fab-actions>
+		    </md-fab-speed-dial>
+		</div>
     </md-content>
 </div>
