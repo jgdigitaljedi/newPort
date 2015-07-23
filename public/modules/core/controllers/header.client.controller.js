@@ -1,12 +1,24 @@
 'use strict';
 
-angular.module('core').controller('HeaderController', ['$scope', 'Authentication', 'Menus', '$mdSidenav', 'Geolocateme', 'Weather', '$rootScope',
-	function($scope, Authentication, Menus, $mdSidenav, Geolocateme, Weather, $rootScope) {
+angular.module('core').controller('HeaderController', ['$scope', 'Authentication', 'Menus', '$mdSidenav', 'Geolocateme', 'Weather', '$rootScope', '$http',
+	function($scope, Authentication, Menus, $mdSidenav, Geolocateme, Weather, $rootScope, $http) {
 		$scope.authentication = Authentication;
 		$scope.isCollapsed = false;
 		$scope.currentTemp = '';
 		$scope.geoIcon = '';
 		$scope.userCity = '';
+		$scope.socialFab = {
+	        topDirections: ['left', 'up'],
+	        bottomDirections: ['down', 'right'],
+	        isOpen: false,
+	        availableModes: ['md-fling', 'md-scale'],
+	        selectedMode: 'md-fling',
+	        availableDirections: ['up', 'down', 'left', 'right'],
+	        selectedDirection: 'right'
+	    };
+	    $http.get('/lastfm').success(function(response) {
+	    	console.log('lastfm', response);
+	    });
 
 		function callWeather() {
 			console.log('weatherCalled', $rootScope.currentLocale);

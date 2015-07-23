@@ -4,4 +4,5 @@
 module.exports = function(app) {
 	var proxy = require('../../app/controllers/proxy.controller');
 	app.route('/conditions/:loc').get(proxy.conditions);
+	app.route('/lastfm').get(proxy.lastfm);
 };

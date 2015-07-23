@@ -12,8 +12,9 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
 	        availableModes: ['md-fling', 'md-scale'],
 	        selectedMode: 'md-fling',
 	        availableDirections: ['up', 'down', 'left', 'right'],
-	        selectedDirection: 'left'
+	        selectedDirection: 'right'
 	    };
+	    $scope.resume = 'Resumè';
 
 		function toggleUsersList() {
             $mdSidenav('left').toggle();

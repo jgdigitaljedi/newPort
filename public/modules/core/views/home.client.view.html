@@ -1,49 +1,51 @@
 <div flex layout="row" id="home-section" data-ng-controller="HomeController">
- 
-    <!-- Container #3 Left -->
-    <md-sidenav md-is-locked-open="true" md-component-id="left" class="md-primary md-hue-2">
-        <md-list>
-            <!-- <md-item ng-repeat="it in ul.users">
-                <md-button ng-click="ul.selectUser(it)"
-                           ng-class="{'selected' : it === ul.selected }">
-                    <md-icon md-svg-icon="{{it.avatar}}" class="avatar"></md-icon>
-                    {{it.name}}
-                </md-button>
-            </md-item> -->
-            <md-item><h1 class="sidenav-option">Welcome!</h1></md-item>
-            <md-divider></md-divider>
-            <md-item><h1 class="sidenav-option">About Me</h1></md-item>
-            <md-divider></md-divider>
-            <md-item><h1 class="sidenav-option">Projects</h1></md-item>
-            <md-divider></md-divider>
-            <md-item><h1 class="sidenav-option">Resume</h1></md-item>
-            <md-divider></md-divider>
-            <md-item><h1 class="sidenav-option">Contact Me</h1></md-item>
-            <md-divider></md-divider>
-            <md-item><h1 class="sidenav-option">Just for Fun</h1></md-item>
-
-        </md-list>
-    </md-sidenav>
     <md-content flex id="main-content">
-		<div class="lock-size" layout="row" layout-align="end center">
-		    <md-fab-speed-dial md-open="socialFab.isOpen" md-direction="{{socialFab.selectedDirection}}" ng-class="socialFab.selectedMode">
-		       	<md-fab-trigger>
-		         	<md-button aria-label="menu" class="md-fab md-accent">
-		           		<md-icon md-svg-icon="menu"></md-icon>
-		         	</md-button>
-		       	</md-fab-trigger>
-		       	<md-fab-actions>
-		         	<md-button aria-label="twitter" class="md-fab md-raised md-mini" href="http://www.twitter.com/jgdigitaljedi">
-		           		<md-icon md-svg-icon="twitter"></md-icon>
-		         	</md-button>
-		         	<md-button aria-label="google_plus" class="md-fab md-raised md-mini">
-		           		<md-icon md-svg-icon="google_plus"></md-icon>
-		         	</md-button>
-		         	<md-button aria-label="Google hangout" class="md-fab md-raised md-mini">
-		           		<md-icon md-svg-src="img/icons/hangout.svg"></md-icon>
-		         	</md-button>
-		       </md-fab-actions>
-		    </md-fab-speed-dial>
-		</div>
+    	<md-content class="md-padding trans-back">
+    	    <md-tabs md-dynamic-height md-border-bottom>
+    	        <md-tab label="Welcome!">
+    	        	<md-content class="md-padding trans-back">
+    	          		<h1 class="md-display-2 amber-header">Welcome!</h1>
+    	          		<p>This is my portfolio. You dig?</p>
+    	          		<p>This is my portfolio. You dig?</p>
+    	          		<p>This is my portfolio. You dig?</p>
+    	          		<p>This is my portfolio. You dig?</p>
+    	          		<p>This is my portfolio. You dig?</p>
+    	          		<p>This is my portfolio. You dig?</p>
+    	          		<p>This is my portfolio. You dig?</p>
+    	          		<p>This is my portfolio. You dig?</p>
+    	        	</md-content>
+    	      	</md-tab>
+    	      	<md-tab label="About Me">
+    	        	<md-content class="md-padding">
+    	          		<h1 class="md-display-2 amber-header">A little about me...</h1>
+    	          		<p>I am groot.</p>
+    	        	</md-content>
+    	      	</md-tab>
+    	      	<md-tab label="Projects">
+    	        	<md-content class="md-padding">
+    	          		<h1 class="md-display-2 amber-header">Projects</h1>
+    	          		<p>Here will be a bunch of pictures and descriptions of stuff I've built outside of work.</p>
+    	        	</md-content>
+    	      	</md-tab>
+    	      	<md-tab label="{{resume}}">
+    	        	<md-content class="md-padding">
+    	          		<h1 class="md-display-2 amber-header">Resum&eacute;</h1>
+    	          		<p>HTML5 resume and downloadable version</p>
+    	        	</md-content>
+    	      	</md-tab>
+    	      	<md-tab label="Contact Me">
+    	        	<md-content class="md-padding">
+    	          		<h1 class="md-display-2 amber-header">Contact Me</h1>
+    	          		<p>Email, city, and Node mailer</p>
+    	        	</md-content>
+    	      	</md-tab>
+    	      	<md-tab label="Just for Fun">
+    	        	<md-content class="md-padding">
+    	          		<h1 class="md-display-2 amber-header">Restaurant Roulette</h1>
+    	          		<p>re-write of my old Restaurant Roulette app</p>
+    	        	</md-content>
+    	      	</md-tab>
+    	    </md-tabs>
+    	</md-content>
     </md-content>
 </div>
