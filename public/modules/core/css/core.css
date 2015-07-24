@@ -1,3 +1,9 @@
+.about-section {
+  color: white;
+}
+
+
+
 .big-flat-header h1 {
   margin-left: 10px;
   font-size: inherit;
@@ -110,3 +116,8 @@ md-sidenav.md-closed.md-locked-open-add-active {
   margin: 0 auto;
   text-align: center;
 }
+.about-section {
+  color: white;
+}
+
+
