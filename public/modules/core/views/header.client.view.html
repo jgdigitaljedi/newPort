@@ -1,31 +1,23 @@
 <div class="big-flat-header" data-ng-controller="HeaderController" flex>
     <md-toolbar layout="row">
-    	<div flex>
+    	<div flex="33">
         	<h1 class="my-name">Joey Gauthier</h1>
 		</div>
-		<div flex>
-			<!-- <div class="lock-size" layout="row" layout-align="center center">
-		    <md-fab-speed-dial md-open="socialFab.isOpen" md-direction="{{socialFab.selectedDirection}}" ng-class="socialFab.selectedMode">
-		       	<md-fab-trigger>
-		         	<md-button aria-label="menu" class="md-fab md-accent no-margin">
-		           		<md-icon md-svg-icon="menu"></md-icon>
-		         	</md-button>
-		       	</md-fab-trigger>
-		       	<md-fab-actions>
-		         	<md-button aria-label="twitter" class="md-fab md-raised md-mini" href="http://www.twitter.com/jgdigitaljedi">
-		           		<md-icon md-svg-icon="twitter"></md-icon>
-		         	</md-button>
-		         	<md-button aria-label="google_plus" class="md-fab md-raised md-mini">
-		           		<md-icon md-svg-icon="google_plus"></md-icon>
-		         	</md-button>
-		         	<md-button aria-label="Google hangout" class="md-fab md-raised md-mini">
-		           		<md-icon md-svg-src="img/icons/hangout.svg"></md-icon>
-		         	</md-button>
-		       </md-fab-actions>
-		    </md-fab-speed-dial>
-		</div> -->
+		<div flex="33" layout="row" layout-align="space-around center" class="centered">
+			<div flex="25">
+				<a href="http://www.twitter.com/jgdigitaljedi" target="_blank"><img src="/assets/images/twitter_icon.png" class="social-icons" /></a>
+			</div>
+			<div flex="25">
+				<a href="https://www.linkedin.com/in/paulgauthier81" target="_blank"><img src="/assets/images/linkedin_icon.png" class="social-icons" /></a>
+			</div>
+			<div flex="25">
+				<a href="https://github.com/jgdigitaljedi" target="_blank"><img src="/assets/images/github_icon.png" class="social-icons" /></a>
+			</div>
+			<div flex="25">
+				<a href="https://plus.google.com/u/0/+JoeyGauthier/posts" target="_blank"><img src="/assets/images/googleplus_icon.png" class="social-icons" /></a>
+			</div>
 		</div>
-		<div id="weather-container" flex>
+		<div id="weather-container" flex="33">
 			<h1 class="the-weather">{{userCity}}: {{currentTemp}}&deg;f </h1><img class="current-weather-icon" ng-src="{{geoIcon}}" />
 		</div>
     </md-toolbar>
