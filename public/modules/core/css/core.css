@@ -1,6 +1,30 @@
 .about-section {
   color: white;
 }
+.about-section .left-half {
+  width: 70%;
+  font-size: .8em;
+  padding: 0;
+  margin: 0 auto;
+}
+.about-section .song-image {
+  height: 52px;
+  width: 52px;
+  margin: 2px 10px 1px auto;
+}
+.about-section .last-card {
+  margin: -16px auto 0;
+  text-align: center;
+  background-color: #607d8b;
+}
+.about-section .last-card a:link,
+.about-section .last-card a:hover {
+  text-decoration: none;
+  color: white;
+}
+.about-section .card-title {
+  margin-bottom: 0;
+}
 
 
 
@@ -118,6 +142,30 @@ md-sidenav.md-closed.md-locked-open-add-active {
 }
 .about-section {
   color: white;
+}
+.about-section .left-half {
+  width: 70%;
+  font-size: .8em;
+  padding: 0;
+  margin: 0 auto;
+}
+.about-section .song-image {
+  height: 52px;
+  width: 52px;
+  margin: 2px 10px 1px auto;
+}
+.about-section .last-card {
+  margin: -16px auto 0;
+  text-align: center;
+  background-color: #607d8b;
+}
+.about-section .last-card a:link,
+.about-section .last-card a:hover {
+  text-decoration: none;
+  color: white;
+}
+.about-section .card-title {
+  margin-bottom: 0;
 }
 
 

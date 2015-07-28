@@ -28,7 +28,8 @@ module.exports = {
 				'public/lib/angular-ui-router/release/angular-ui-router.js',
 				'public/lib/angular-ui-utils/ui-utils.js',
 				'public/lib/angular-material/angular-material.js',
-				'public/lib/moment/min/moment.min.js'
+				'public/lib/moment/min/moment.min.js',
+				'public/lib/jquery/dist/jquery.min.js'
 				// 'public/lib//angular-material/modules/js/**/*.js'
 			]
 		},
