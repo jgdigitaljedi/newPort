@@ -1,6 +1,37 @@
 .about-section {
   color: white;
 }
+.about-section .decor {
+  height: 80px;
+  width: 80px;
+}
+.about-section .pics-of-me {
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+.about-section .divider-graphic {
+  width: 70%;
+  height: 70%;
+}
+.about-section .writeup-box {
+  text-align: center;
+  width: 100%;
+  margin-top: 6px;
+}
+.about-section .top-corner {
+  margin: 0 -10px -10px 0;
+}
+.about-section .bottom-corner {
+  margin: -10px 0 0 -10px;
+}
+.about-section .middle-bio {
+  color: #ffc107;
+}
+.about-section .bottom-bio {
+  color: white;
+}
 .about-section .left-half {
   width: 70%;
   font-size: .8em;
@@ -15,7 +46,7 @@
 .about-section .last-card {
   margin: -16px auto 0;
   text-align: center;
-  background-color: #607d8b;
+  background-color: rgba(96, 125, 135, 0.9);
 }
 .about-section .last-card a:link,
 .about-section .last-card a:hover {
@@ -26,6 +57,25 @@
   margin-bottom: 0;
 }
 
+.contact-section .contact-header {
+  color: white;
+  font-weight: bold;
+}
+.contact-section .contact-form {
+  width: 60%;
+}
+.contact-section .half-width {
+  width: 50%;
+}
+.contact-section .accent-label {
+  color: #ffc107;
+}
+.contact-section .trans-back {
+  background: transparent;
+}
+.contact-section .height-fix {
+  min-height: 280px;
+}
 
 
 .big-flat-header h1 {
@@ -143,6 +193,37 @@ md-sidenav.md-closed.md-locked-open-add-active {
 .about-section {
   color: white;
 }
+.about-section .decor {
+  height: 80px;
+  width: 80px;
+}
+.about-section .pics-of-me {
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+.about-section .divider-graphic {
+  width: 70%;
+  height: 70%;
+}
+.about-section .writeup-box {
+  text-align: center;
+  width: 100%;
+  margin-top: 6px;
+}
+.about-section .top-corner {
+  margin: 0 -10px -10px 0;
+}
+.about-section .bottom-corner {
+  margin: -10px 0 0 -10px;
+}
+.about-section .middle-bio {
+  color: #ffc107;
+}
+.about-section .bottom-bio {
+  color: white;
+}
 .about-section .left-half {
   width: 70%;
   font-size: .8em;
@@ -157,7 +238,7 @@ md-sidenav.md-closed.md-locked-open-add-active {
 .about-section .last-card {
   margin: -16px auto 0;
   text-align: center;
-  background-color: #607d8b;
+  background-color: rgba(96, 125, 135, 0.9);
 }
 .about-section .last-card a:link,
 .about-section .last-card a:hover {
@@ -166,6 +247,25 @@ md-sidenav.md-closed.md-locked-open-add-active {
 }
 .about-section .card-title {
   margin-bottom: 0;
+}
+.contact-section .contact-header {
+  color: white;
+  font-weight: bold;
+}
+.contact-section .contact-form {
+  width: 60%;
+}
+.contact-section .half-width {
+  width: 50%;
+}
+.contact-section .accent-label {
+  color: #ffc107;
+}
+.contact-section .trans-back {
+  background: transparent;
+}
+.contact-section .height-fix {
+  min-height: 280px;
 }
 
 

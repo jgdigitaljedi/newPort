@@ -1,4 +1,46 @@
 <section class="contact-section" ng-controller="ContactControllerController">
-	<h1 class="md-display-2 amber-header">Contact Me</h1>
-	<p>Email, city, and Node mailer</p>
+	<div layout layout-align="center center">
+		<span layout="row" layout-align="center center">
+			<h1 class="md-display-2 contact-header">Drop Me a Line</h1>
+		</span>
+	</div>
+	<md-content layout-padding layout="row" layout-align="center center" class="trans-back">
+	    <form name="userForm" class="contact-form">
+	  		<md-content layout-padding class="trans-back height-fix">
+	      		<div layout>
+			        <md-input-container class="half-width">
+			          	<label class="accent-label">First name</label>
+			          	<input required name="firstName" ng-model="user.firstName">
+			          	<div ng-messages="userForm.firstName.$error">
+			             	<div ng-message="required">I need to know who your are!</div>
+			            </div>
+			        </md-input-container>
+			        <md-input-container class="half-width">
+			          	<label class="accent-label">Last Name</label>
+			          	<input ng-model="theMax">
+			        </md-input-container>
+	      		</div>
+	      		<div layout>
+	        		<md-input-container class="half-width">
+	            		<label class="accent-label">Company (optional)</label>
+	            		<input ng-model="user.company">
+	          		</md-input-container>
+			    	<md-input-container class="half-width">
+			      		<label class="accent-label">Email</label>
+			      		<input ng-model="user.email" required name="email" type="email">
+			      		<div ng-messages="userForm.email.$error">
+			             	<div ng-message="required">How am I supposed to reply?</div>
+			            </div>
+			    	</md-input-container>
+			    </div>
+			    <md-input-container flex>
+			        <label class="accent-label">Comments</label>
+			        <textarea ng-model="user.comments" columns="1" md-maxlength="500" required name="comments" ></textarea>
+			        <div ng-messages="userForm.comments.$error">
+			            <div ng-message="required">Why are you contacting me?</div>
+			        </div>
+			    </md-input-container>
+			</md-content>
+	    </form>
+	</md-content>
 </section>
