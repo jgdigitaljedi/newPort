@@ -10,6 +10,8 @@ angular.module('core').controller('ContactControllerController', ['$scope', '$ht
 			$http.post('/contact', {
 				firstName: user.firstName,
 				email: user.email,
+				lastName: user.lastName,
+				company: user.company,
 				comment: user.comments
 			}).success(function(res) {
 

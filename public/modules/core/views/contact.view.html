@@ -22,11 +22,11 @@
 	      		</div>
 	      		<div layout>
 	        		<md-input-container class="half-width">
-	            		<label class="accent-label">Company (optional)</label>
+	            		<label class="accent-label"><i class="fa fa-building"></i> Company (optional)</label>
 	            		<input ng-model="user.company">
 	          		</md-input-container>
 			    	<md-input-container class="half-width">
-			      		<label class="accent-label">Email</label>
+			      		<label class="accent-label"><i class="fa fa-envelope"></i> Email</label>
 			      		<input ng-model="user.email" required name="email" type="email">
 			      		<!-- <div ng-messages="userForm.email.$error">
 			             	<div ng-message="required">How am I supposed to reply?</div>
@@ -34,7 +34,7 @@
 			    	</md-input-container>
 			    </div>
 			    <md-input-container flex>
-			        <label class="accent-label">Comments</label>
+			        <label class="accent-label"><i class="fa fa-comment"></i> Comments</label>
 			        <textarea ng-model="user.comments" columns="1" md-maxlength="500" required name="comments" ></textarea>
 			        <!-- <div ng-messages="userForm.comments.$error">
 			            <div ng-message="required">Why are you contacting me?</div>
@@ -42,7 +42,7 @@
 			    </md-input-container>
 			</md-content>
 			<div layout layout-align="center center">
-				<md-button ng-click="sendEmail(user)" class="md-accent"> Submit </md-button>
+				<md-button ng-click="sendEmail(user)" class="md-accent"><i class="fa fa-paper-plane"></i> Submit </md-button>
 			</div>
 	    </form>
 	</md-content>

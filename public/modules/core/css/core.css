@@ -1,6 +1,9 @@
 .about-section {
   color: white;
 }
+.about-section .spinner {
+  width: 289px;
+}
 .about-section .decor {
   height: 80px;
   width: 80px;
@@ -57,6 +60,10 @@
   margin-bottom: 0;
 }
 
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #424242 inset;
+  -webkit-text-fill-color: white !important;
+}
 .contact-section .contact-header {
   color: white;
   font-weight: bold;
@@ -193,6 +200,9 @@ md-sidenav.md-closed.md-locked-open-add-active {
 .about-section {
   color: white;
 }
+.about-section .spinner {
+  width: 289px;
+}
 .about-section .decor {
   height: 80px;
   width: 80px;
@@ -247,6 +257,10 @@ md-sidenav.md-closed.md-locked-open-add-active {
 }
 .about-section .card-title {
   margin-bottom: 0;
+}
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #424242 inset;
+  -webkit-text-fill-color: white !important;
 }
 .contact-section .contact-header {
   color: white;
