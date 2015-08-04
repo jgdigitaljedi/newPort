@@ -11,13 +11,13 @@
 			        <md-input-container class="half-width">
 			          	<label class="accent-label">First name</label>
 			          	<input required name="firstName" ng-model="user.firstName">
-			          	<div ng-messages="userForm.firstName.$error">
+			          	<!-- <div ng-messages="userForm.firstName.$error">
 			             	<div ng-message="required">I need to know who your are!</div>
-			            </div>
+			            </div> -->
 			        </md-input-container>
 			        <md-input-container class="half-width">
 			          	<label class="accent-label">Last Name</label>
-			          	<input ng-model="theMax">
+			          	<input ng-model="user.lastName">
 			        </md-input-container>
 	      		</div>
 	      		<div layout>
@@ -28,19 +28,22 @@
 			    	<md-input-container class="half-width">
 			      		<label class="accent-label">Email</label>
 			      		<input ng-model="user.email" required name="email" type="email">
-			      		<div ng-messages="userForm.email.$error">
+			      		<!-- <div ng-messages="userForm.email.$error">
 			             	<div ng-message="required">How am I supposed to reply?</div>
-			            </div>
+			            </div> -->
 			    	</md-input-container>
 			    </div>
 			    <md-input-container flex>
 			        <label class="accent-label">Comments</label>
 			        <textarea ng-model="user.comments" columns="1" md-maxlength="500" required name="comments" ></textarea>
-			        <div ng-messages="userForm.comments.$error">
+			        <!-- <div ng-messages="userForm.comments.$error">
 			            <div ng-message="required">Why are you contacting me?</div>
-			        </div>
+			        </div> -->
 			    </md-input-container>
 			</md-content>
+			<div layout layout-align="center center">
+				<md-button ng-click="sendEmail(user)" class="md-accent"> Submit </md-button>
+			</div>
 	    </form>
 	</md-content>
 </section>
