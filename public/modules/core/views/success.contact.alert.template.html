@@ -1,0 +1,23 @@
+<md-dialog aria-label="Email Sent">
+    <form>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Email Sent</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="closeDialog()">
+                    <i class="fa fa-times"></i>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content>
+            <div>
+                <div class="success-icon"><i class="fa fa-check-circle fa-5x"></i></div>
+                <p class="alert-text">Thanks for checking out the site and for contacting me. I will get back to you as soon as I can. Enjoy your stay!</p>
+            </div>
+        </md-dialog-content>
+        <div class="md-actions" layout="row">
+            <span flex></span>
+            <md-button ng-click="closeDialog()" class="md-accent"><i class="fa fa-times"></i> Close </md-button>
+        </div>
+    </form>
+</md-dialog>

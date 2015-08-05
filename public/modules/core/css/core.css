@@ -64,6 +64,14 @@ input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 1000px #424242 inset;
   -webkit-text-fill-color: white !important;
 }
+.success-icon {
+  width: 100%;
+  text-align: center;
+  color: #ffc107;
+}
+.alert-text {
+  color: white;
+}
 .contact-section .contact-header {
   color: white;
   font-weight: bold;
@@ -261,6 +269,14 @@ md-sidenav.md-closed.md-locked-open-add-active {
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 1000px #424242 inset;
   -webkit-text-fill-color: white !important;
+}
+.success-icon {
+  width: 100%;
+  text-align: center;
+  color: #ffc107;
+}
+.alert-text {
+  color: white;
 }
 .contact-section .contact-header {
   color: white;

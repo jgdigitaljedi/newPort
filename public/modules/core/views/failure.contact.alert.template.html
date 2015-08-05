@@ -1,0 +1,23 @@
+<md-dialog aria-label="Something Went Wrong">
+    <form>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Something Went Wrong</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="closeDialog()">
+                    <i class="fa fa-times"></i>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content>
+            <div>
+                <div class="success-icon"><i class="fa fa-exclamation-triangle"></i></div>
+                <p class="alert-text">OH NO! Something didn't work as planned! You can email me at digitaljedi@outlook.com and please do to let me know that this isn't working!</p>
+            </div>
+        </md-dialog-content>
+        <div class="md-actions" layout="row">
+            <span flex></span>
+            <md-button ng-click="closeDialog()" class="md-accent"><i class="fa fa-times"></i> Close </md-button>
+        </div>
+    </form>
+</md-dialog>
