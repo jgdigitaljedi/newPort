@@ -11,13 +11,17 @@ angular.module('core').controller('AboutControllerController', ['$scope', '$http
 				var artistWeb = result[i].artist['#text'].split(' ').join('+'),
 					nameWeb = result[i].name.split(' ').join('+'),
 					ytUrl = 'https://www.youtube.com/results?search_query=' + artistWeb + '-' + nameWeb,
-					template = $compile('<a href="' + ytUrl + '" target="__blank"><md-whiteframe class="md-whiteframe-z2" layout layout-align="center center">' +
-						'<div class="left-half"><span class="artist-name" style="text-decoration: none; color: white"><em><u>Artist:</u></em> ' + 
-					result[i].artist['#text'] + '</span><br><span class="song-name" style="text-decoration: none; color: white"><em><u>Song:</u></em>  ' + result[i].name +
-					'</span></div><img src="' + result[i].image[1]['#text'] + '" class="song-image"/></a>')($scope);
+					template = $compile('<a href="' + ytUrl + '" target=\'__blank\'><img src="' + result[i].image[1]['#text'] +
+						'" class="song-image"/><md-tooltip style="color: black;">' + result[i].artist['#text'] + ' / ' + result[i].name +
+						'</md-tooltip></a>')($scope);
 				$('#lastfm-widget').append(template);
+
 			}
-			
+			var lastfmSite = $compile('<a href="http://www.last.fm/user/joeygstrings" target=\'__blank\'>' +
+				'<img class="lastfm-ender" src="assets/images/lastfm-icon.png" />' +
+				'<md-tooltip style="color: black;">My Lastfm Profile</md-tooltip>')($scope);
+			$('#lastfm-widget').append(lastfmSite);
+
 		}
 
 		$http.get('/lastfm').success(function(result) {

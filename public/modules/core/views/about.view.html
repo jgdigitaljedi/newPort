@@ -1,5 +1,5 @@
-<section flex layout="row" class="about-section" ng-controller="AboutControllerController">
-	<div flex="67" layout="column" layout-align="start center">
+<section class="about-section" ng-controller="AboutControllerController">
+	<div layout="column" layout-align="start center">
 		<div layout="row" layout layout-align="center center">
 			<img src="assets/images/large_619034.png" class="pics-of-me" />
 		</div>
@@ -7,29 +7,18 @@
 			<img src="assets/images/divider.png" class="divider-graphic" />
 		</div>
 		<div class="about-me-bio-area">
-			<div  layout-align="start start" class="writeup-box" layout="column">
-				<p class="little-bio">
-				Born and raised in Texas but having been exposed to much more, I feel like I have a unique outlook and attitude toward the world. I was once in a metal band that gigged and toured as much as possible for 7 years. Since then I've waited tables, worked in retail management, done property management, been a radio tower network engineer spending my day hundreds of feet off the ground in the Texas heat, owned a PC repair business, worked for 6 years as top-tier IT support for a major communications company, and finally figured out that I love to write software and want to make that my career. Currently I spend 8+ hours a day writing Angular applications to visualize big data for government clients. The material may be a bit dry, but the challenge of creating the best possible using experience and visualizations keeps me waking up with a smile on my face every morning.
-				</p>
-				<p class="middle-bio">When I'm not writing code for work, I can sometimes be found at home taking a PHP class or trying to get an Android app built for myself. My love for writing code will never fade! Fortunately for me, my son (6 years old) has shown interest in learning how to code so I get to share my love of programming/coding with him. 
-				</p>
-				<p class="bottom-bio">
-				Languages I've written in (in order of how well I know them and excluding HTML/CSS because they're not languages): <br>
-				JavaScript (wit tons of Angular), VBScript, PHP, Python, bash and batch scripting, Java, C++, and BASIC (on my good 'ol Apple IIC when I was growing up).
-				</p>
-			</div>
+            <div  layout-align="center center" class="writeup-box" layout="column">
+                <p class="my-name">joey gauthier</p>
+                <p class="my-profession">JavaScript / UXUI Developer</p>
+                <p class="small-desc-line">NodeJS tinkerer, guitar extraordinaire, Raspberry Pi project lover, and beard enthusiast.</p>
+            </div>
+
 		</div>
 	</div>
-	<div flex="33" layout="column" layout-align="start center">
-		<md-card class="last-card">
-		<h4 class="card-title">Last 10 songs I've listened to...</h4>
-			<md-card-content id="lastfm-widget">
-				<md-whiteframe class="md-whiteframe-z2" ng-show="showloader" ng-hide="!showloader" layout layout-align="center center">Loading...
-				</md-whiteframe>
-				<md-whiteframe class="md-whiteframe-z2 spinner" ng-show="showloader" ng-hide="!showloader" layout layout-align="center center">
-					<md-progress-circular class="md-accent" md-mode="indeterminate"></md-progress-circular>
-				</md-whiteframe>
-			</md-card-content>
-		</md-card>
+	<div class="last-fm-section" layout="row" layout-align="center end">
+        <div class="last-card">
+            <span><em>Last 10 songs I've listened to (hover for info)...</em></span>
+            <div id="lastfm-widget"></div>
+        </div>
 	</div>
 </section>

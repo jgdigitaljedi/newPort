@@ -1,5 +1,32 @@
 .about-section {
-  color: white;
+  color: #f1f1f1;
+  height: 77vh;
+}
+.about-section .about-me-bio-area .my-name {
+  font-size: 5em;
+  font-family: 'langdon';
+  margin: 30px auto 12px;
+}
+.about-section .about-me-bio-area .my-profession {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0 auto 12px;
+  -webkit-text-shadow: 1px 1px #222;
+  text-shadow: 1px 1px #222;
+}
+.about-section .about-me-bio-area .small-desc-line {
+  color: #ffc107;
+  font-weight: bold;
+  margin: 0 auto 12px;
+  -webkit-text-shadow: 1px 1px #222;
+  text-shadow: 1px 1px #222;
+}
+.about-section .last-fm-section {
+  min-height: 18vh;
+}
+.about-section .last-fm-section .lastfm-ender {
+  border-left: 1px solid #f1f1f1;
+  padding-left: 10px;
 }
 .about-section .spinner {
   width: 289px;
@@ -47,14 +74,17 @@
   margin: 2px 10px 1px auto;
 }
 .about-section .last-card {
-  margin: -16px auto 0;
+  margin: 12px auto 0;
   text-align: center;
-  background-color: rgba(96, 125, 135, 0.9);
 }
 .about-section .last-card a:link,
 .about-section .last-card a:hover {
   text-decoration: none;
-  color: white;
+  color: black;
+}
+.about-section .last-card span {
+  -webkit-text-shadow: 1px 1px #222;
+  text-shadow: 1px 1px #222;
 }
 .about-section .card-title {
   margin-bottom: 0;
@@ -98,7 +128,7 @@ input:-webkit-autofill {
   font-size: inherit;
   font-weight: inherit;
   display: inline-block;
-  font-family: 'Signika';
+  font-family: 'Exo', sans-serif;
 }
 .big-flat-header #weather-container {
   text-align: right;
@@ -124,7 +154,7 @@ md-sidenav.md-closed.md-locked-open-add-active {
 .sidenav-option {
   color: #607d8b;
   margin-left: 18px;
-  font-family: 'Signika';
+  font-family: 'Exo', sans-serif;
 }
 .foot {
   bottom: 0;
@@ -150,12 +180,13 @@ md-sidenav.md-closed.md-locked-open-add-active {
 }
 
 @import url('http://fonts.googleapis.com/css?family=Viga|Signika');
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700,800,400italic,700italic,900');
 .big-flat-header h1 {
   margin-left: 10px;
   font-size: inherit;
   font-weight: inherit;
   display: inline-block;
-  font-family: 'Signika';
+  font-family: 'Exo', sans-serif;
 }
 .big-flat-header #weather-container {
   text-align: right;
@@ -181,7 +212,7 @@ md-sidenav.md-closed.md-locked-open-add-active {
 .sidenav-option {
   color: #607d8b;
   margin-left: 18px;
-  font-family: 'Signika';
+  font-family: 'Exo', sans-serif;
 }
 .foot {
   bottom: 0;
@@ -206,7 +237,34 @@ md-sidenav.md-closed.md-locked-open-add-active {
   text-align: center;
 }
 .about-section {
-  color: white;
+  color: #f1f1f1;
+  height: 77vh;
+}
+.about-section .about-me-bio-area .my-name {
+  font-size: 5em;
+  font-family: 'langdon';
+  margin: 30px auto 12px;
+}
+.about-section .about-me-bio-area .my-profession {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0 auto 12px;
+  -webkit-text-shadow: 1px 1px #222;
+  text-shadow: 1px 1px #222;
+}
+.about-section .about-me-bio-area .small-desc-line {
+  color: #ffc107;
+  font-weight: bold;
+  margin: 0 auto 12px;
+  -webkit-text-shadow: 1px 1px #222;
+  text-shadow: 1px 1px #222;
+}
+.about-section .last-fm-section {
+  min-height: 18vh;
+}
+.about-section .last-fm-section .lastfm-ender {
+  border-left: 1px solid #f1f1f1;
+  padding-left: 10px;
 }
 .about-section .spinner {
   width: 289px;
@@ -254,14 +312,17 @@ md-sidenav.md-closed.md-locked-open-add-active {
   margin: 2px 10px 1px auto;
 }
 .about-section .last-card {
-  margin: -16px auto 0;
+  margin: 12px auto 0;
   text-align: center;
-  background-color: rgba(96, 125, 135, 0.9);
 }
 .about-section .last-card a:link,
 .about-section .last-card a:hover {
   text-decoration: none;
-  color: white;
+  color: black;
+}
+.about-section .last-card span {
+  -webkit-text-shadow: 1px 1px #222;
+  text-shadow: 1px 1px #222;
 }
 .about-section .card-title {
   margin-bottom: 0;
@@ -296,6 +357,15 @@ input:-webkit-autofill {
 }
 .contact-section .height-fix {
   min-height: 280px;
+}
+@font-face {
+  font-family: 'langdon';
+  src: url('../../core/assets/fonts/langdon-webfont.eot');
+  src: url('../../core/assets/fonts/langdon-webfont.eot?#iefix') format('embedded-opentype'), url('../../core/assets/fonts/langdon-webfont.woff') format('woff'), url('../../core/assets/fonts/langdon-webfont.ttf') format('truetype'), url('../../core/assets/fonts/langdon-webfont.svg#Langdon') format('svg');
+}
+body {
+  font-family: 'Exo', sans-serif;
+  color: #f1f1f1;
 }
 
 
