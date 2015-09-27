@@ -18,5 +18,5 @@ I've incorporated in into this project as well.
 
 ##Built with
 
-[![MEAN.JS Logo](http://meanjs.org/img/logo-small.png)](http://meanjs.org/)  [![Angular Material Logo](https://material.angularjs.org/latest/img/icons/angular-logo.svg)]
+[![MEAN.JS Logo](http://meanjs.org/img/logo-small.png)](http://meanjs.org/)  ![Angular Material Logo](https://avatars0.githubusercontent.com/u/139426?v=3&s=400)
 
