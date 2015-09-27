@@ -10,9 +10,13 @@ worked on MEAN stack apps the past year, I thought it was appropriate to convert
 I'm not switching it over until this portfolio project is complete, but when I do you will
 be able to view it at http://joeyg.me
 
-Node for the hosting, Angular for the magic, MongoDB for a comments section.
+Node for the hosting, Angular for the magic, MongoDB for...well...I'm not sure yet but
+I'm sure I'll think of a reason.
+
+Also, I've decided I might as well use my [morningReport](https://github.com/jgdigitaljedi/morningReport) project on my server as well so
+I've incorporated in into this project as well.
 
 ##Built with
 
-[![MEAN.JS Logo](http://meanjs.org/img/logo-small.png)](http://meanjs.org/)
+[![MEAN.JS Logo](http://meanjs.org/img/logo-small.png)](http://meanjs.org/)  [![Angular Material Logo](https://material.angularjs.org/latest/img/icons/angular-logo.svg)]
 
