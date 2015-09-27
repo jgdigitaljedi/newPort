@@ -18,5 +18,5 @@ I've incorporated in into this project as well.
 
 ##Built with
 
-[![MEAN.JS Logo](http://meanjs.org/img/logo-small.png)](http://meanjs.org/) <img src="https://avatars0.githubusercontent.com/u/139426?v=3&s=400" style="margin-left: 20px;" height="60" width="60" />
+[![MEAN.JS Logo](http://meanjs.org/img/logo-small.png)](http://meanjs.org/) <img src="https://avatars0.githubusercontent.com/u/139426?v=3&s=400" height="60" width="60" />
 

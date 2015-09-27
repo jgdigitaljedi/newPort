@@ -358,6 +358,44 @@ input:-webkit-autofill {
 .contact-section .height-fix {
   min-height: 280px;
 }
+.projects-section md-content {
+  background: transparent;
+}
+.projects-section md-content md-toolbar {
+  color: #f1f1f1;
+  background-color: #607d8b;
+}
+.projects-section md-content md-toolbar .project-radios {
+  justify-content: space-around;
+}
+.projects-section md-content md-toolbar md-radio-button {
+  text-align: center;
+}
+.projects-section md-content .projects-grid .project-tile {
+  background-size: contain;
+  cursor: pointer;
+}
+.projects-section md-content .projects-grid .my-dash-tile {
+  background-image: url('../../../assets/images/dash.png');
+}
+.projects-section md-content .projects-grid .lassos-tile {
+  background-image: url('../../../assets/images/lassos.png');
+}
+.projects-section md-content .projects-grid .rr-tile {
+  background-image: url('../../../assets/images/rr.png');
+}
+.projects-section md-content .projects-grid .toolbox-tile {
+  background-image: url('../../../assets/images/toolbox.png');
+}
+.projects-section md-content .projects-grid .port-tile {
+  background-image: url('../../../assets/images/newPort.png');
+}
+.projects-section md-content .projects-grid md-grid-tile-footer {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.projects-section md-content .projects-grid md-grid-tile-footer h3 {
+  color: #ffc107;
+}
 @font-face {
   font-family: 'langdon';
   src: url('../../core/assets/fonts/langdon-webfont.eot');
@@ -368,4 +406,42 @@ body {
   color: #f1f1f1;
 }
 
+.projects-section md-content {
+  background: transparent;
+}
+.projects-section md-content md-toolbar {
+  color: #f1f1f1;
+  background-color: #607d8b;
+}
+.projects-section md-content md-toolbar .project-radios {
+  justify-content: space-around;
+}
+.projects-section md-content md-toolbar md-radio-button {
+  text-align: center;
+}
+.projects-section md-content .projects-grid .project-tile {
+  background-size: contain;
+  cursor: pointer;
+}
+.projects-section md-content .projects-grid .my-dash-tile {
+  background-image: url('../../../assets/images/dash.png');
+}
+.projects-section md-content .projects-grid .lassos-tile {
+  background-image: url('../../../assets/images/lassos.png');
+}
+.projects-section md-content .projects-grid .rr-tile {
+  background-image: url('../../../assets/images/rr.png');
+}
+.projects-section md-content .projects-grid .toolbox-tile {
+  background-image: url('../../../assets/images/toolbox.png');
+}
+.projects-section md-content .projects-grid .port-tile {
+  background-image: url('../../../assets/images/newPort.png');
+}
+.projects-section md-content .projects-grid md-grid-tile-footer {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.projects-section md-content .projects-grid md-grid-tile-footer h3 {
+  color: #ffc107;
+}
 

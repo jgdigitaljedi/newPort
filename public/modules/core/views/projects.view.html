@@ -1,34 +1,51 @@
 <section class="projects-section" ng-controller="ProjectsControllerController">
 	<md-content layout-padding>
-		<md-grid-list md-cols-gt-sm="5" md-cols-sm="3" md-row-height="2:2" md-gutter-gt-sm="12px" md-gutter="4px">
-            <md-grid-tile class="blue" md-rowspan="1" md-colspan="1">
-                stuff
+        <md-toolbar>
+            <div layout="row" layout-align="space-around center" flex>
+                <md-radio-group class="project-radios" ng-model="radios" layout="row" flex="100">
+                    <div flex="33" class="project-categories">
+                        <md-radio-button value="sidePro" aria-label="Side Projects">
+                            <label>Side Projects</label>
+                        </md-radio-button>
+                    </div>
+                    <div flex="33" class="project-categories">
+                        <md-radio-button value="ndaPro" aria-label="Work Projects">
+                            <label>Work Projects</label>
+                        </md-radio-button>
+                    </div>
+                    <div flex="33" class="project-categories">
+                        <md-radio-button value="otherPro" aria-label="Other Projects">
+                            <label>Other Projects</label>
+                        </md-radio-button>
+                    </div>
+                </md-radio-group>
+            </div>
+        </md-toolbar>
+        <span flex></span>
+		<md-grid-list class="projects-grid" md-cols-gt-sm="5" md-cols-sm="3" md-row-height="2:2" md-gutter-gt-sm="12px" md-gutter="4px" ng-show="radios === 'sidePro'">
+            <md-grid-tile class="my-dash-tile project-tile" md-rowspan="1" md-colspan="1">
                 <md-grid-tile-footer>
-                    <h3>...and things</h3>
+                    <h3>My Dash</h3>
                 </md-grid-tile-footer>
             </md-grid-tile>
-            <md-grid-tile md-rowspan="1" md-colspan="1">
-                stuff
+            <md-grid-tile class="lassos-tile project-tile" md-rowspan="1" md-colspan="1">
                 <md-grid-tile-footer>
-                    <h3>...and things</h3>
+                    <h3>Texas Lassos Alumni Connect</h3>
                 </md-grid-tile-footer>
             </md-grid-tile>
-            <md-grid-tile md-rowspan="1" md-colspan="1">
-                stuff
+            <md-grid-tile class="rr-tile project-tile" md-rowspan="1" md-colspan="1">
                 <md-grid-tile-footer>
-                    <h3>...and things</h3>
+                    <h3>Restaurant Roulette</h3>
                 </md-grid-tile-footer>
             </md-grid-tile>
-            <md-grid-tile md-rowspan="1" md-colspan="1">
-                stuff
+            <md-grid-tile class="toolbox-tile project-tile" md-rowspan="1" md-colspan="1">
                 <md-grid-tile-footer>
-                    <h3>...and things</h3>
+                    <h3>Toolbox</h3>
                 </md-grid-tile-footer>
             </md-grid-tile>
-            <md-grid-tile md-rowspan="1" md-colspan="1">
-                stuff
+            <md-grid-tile class="port-tile project-tile" md-rowspan="1" md-colspan="1">
                 <md-grid-tile-footer>
-                    <h3>...and things</h3>
+                    <h3>Portfolio</h3>
                 </md-grid-tile-footer>
             </md-grid-tile>
         </md-grid-list>

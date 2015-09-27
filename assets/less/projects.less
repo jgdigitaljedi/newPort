@@ -1,4 +1,52 @@
-.projects-section {
+@blue-gray: #607d8b;
+@dark-amber: #ffc107;
 
-	
+.projects-section {
+  md-content {
+    background: transparent;
+
+    md-toolbar {
+      color: #f1f1f1;
+      background-color: @blue-gray;
+
+      .project-radios {
+        justify-content: space-around;
+      }
+
+      md-radio-button {
+        text-align: center;
+      }
+    }
+
+    .projects-grid {
+
+      .project-tile {
+        background-size: contain;
+        cursor: pointer;
+      }
+      .my-dash-tile {
+        background-image: url('../../../assets/images/dash.png');
+      }
+      .lassos-tile {
+        background-image: url('../../../assets/images/lassos.png');
+      }
+      .rr-tile {
+        background-image: url('../../../assets/images/rr.png');
+      }
+      .toolbox-tile {
+        background-image: url('../../../assets/images/toolbox.png');
+      }
+      .port-tile {
+        background-image: url('../../../assets/images/newPort.png');
+      }
+
+      md-grid-tile-footer {
+        background-color: rgba(0, 0, 0, .6);
+
+        h3 {
+          color: @dark-amber;
+        }
+      }
+    }
+  }
 }
