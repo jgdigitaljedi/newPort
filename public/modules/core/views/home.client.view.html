@@ -1,18 +1,18 @@
 <div flex layout="row" id="home-section" layout-fill data-ng-controller="HomeController">
     <md-content flex id="main-content">
     	<md-content class="md-padding trans-back">
-    	    <md-tabs md-dynamic-height md-border-bottom>
+    	    <md-tabs md-dynamic-height md-swipe-content md-selected="-1">
     	        <md-tab label="Welcome">
-    	        	<md-content class="md-padding trans-back" data-ng-include="'/modules/core/views/about.view.html'"></md-content>
+    	        	<div class="md-padding trans-back" data-ng-include="'/modules/core/views/about.view.html'"></div>
     	      	</md-tab>
     	      	<md-tab label="Projects">
-    	        	<md-content class="md-padding trans-back" data-ng-include="'/modules/core/views/projects.view.html'"></md-content>
+    	        	<div class="md-padding trans-back" data-ng-include="'/modules/core/views/projects.view.html'"></div>
     	      	</md-tab>
     	      	<md-tab label="{{resume}}">
-    	        	<md-content class="md-padding trans-back" data-ng-include="'/modules/core/views/resume.view.html'"></md-content>
+    	        	<div class="md-padding trans-back" data-ng-include="'/modules/core/views/resume.view.html'"></div>
     	      	</md-tab>
     	      	<md-tab label="Contact Me">
-    	        	<md-content class="md-padding trans-back" data-ng-include="'/modules/core/views/contact.view.html'"></md-content>
+    	        	<div class="md-padding trans-back" data-ng-include="'/modules/core/views/contact.view.html'"></div>
     	      	</md-tab>
     	      	<!-- <md-tab label="Just for Fun">
     	        	<md-content class="md-padding trans-back" data-ng-include="'/modules/core/views/fun.view.html'"></md-content>

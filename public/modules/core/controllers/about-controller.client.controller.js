@@ -12,7 +12,8 @@ angular.module('core').controller('AboutControllerController', ['$scope', '$http
 				var artistWeb = result[i].artist['#text'].split(' ').join('+'),
 					nameWeb = result[i].name.split(' ').join('+'),
 					ytUrl = 'https://www.youtube.com/results?search_query=' + artistWeb + '-' + nameWeb,
-					template = $compile('<a href="' + ytUrl + '" target=\'__blank\'><img src="' + result[i].image[1]['#text'] +
+                    albumImage = result[i].image[1]['#text'] ? result[i].image[1]['#text'] : '../../../assets/images/no-image.png',
+					template = $compile('<a href="' + ytUrl + '" target=\'__blank\'><img src="' + albumImage +
 						'" class="song-image"/><md-tooltip style="color: black;">' + result[i].artist['#text'] + ' / ' + result[i].name +
 						'</md-tooltip></a>')($scope);
 				$('#lastfm-widget').append(template);

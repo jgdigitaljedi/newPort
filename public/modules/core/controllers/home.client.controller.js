@@ -1,8 +1,8 @@
 'use strict';
 
 
-angular.module('core').controller('HomeController', ['$scope', 'Authentication', '$mdSidenav',
-	function($scope, Authentication, $mdSidenav) {
+angular.module('core').controller('HomeController', ['$scope', 'Authentication', '$mdSidenav', '$timeout',
+	function($scope, Authentication, $mdSidenav, $timeout) {
 		// This provides Authentication context which I'll probably never use but it's here in case I do.
 		$scope.authentication = Authentication;
 		$scope.socialFab = {
@@ -26,4 +26,5 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
         self.users        = [ ];
         self.toggleList   = toggleUsersList;
 	}
+
 ]);

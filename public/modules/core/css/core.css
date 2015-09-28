@@ -187,6 +187,10 @@ md-sidenav.md-closed.md-locked-open-add-active {
   margin: 0 auto;
   text-align: center;
 }
+.ng-inline-animate {
+  transform: none !important;
+  transition: none !important;
+}
 
 @import url('http://fonts.googleapis.com/css?family=Viga|Signika');
 @import url('https://fonts.googleapis.com/css?family=Exo:400,700,800,400italic,700italic,900');
@@ -244,6 +248,10 @@ md-sidenav.md-closed.md-locked-open-add-active {
 .centered {
   margin: 0 auto;
   text-align: center;
+}
+.ng-inline-animate {
+  transform: none !important;
+  transition: none !important;
 }
 .about-section {
   color: #f1f1f1;

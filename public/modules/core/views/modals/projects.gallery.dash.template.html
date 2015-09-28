@@ -8,7 +8,7 @@
             <div layout="row" flex>
                 <div class="vertical-film" layout="column" flex="15" ng-show="{{which.images.length > 1}}">
                     <div class="photo-film" ng-repeat="image in which.images">
-                        <img class="film-square" ng-src="{{image}}" ng-click="changePic($event, image)" />
+                        <img class="film-square" ng-src="{{image}}" ng-click="changePic($event, image)" ng-class="$index === 0 ? 'selected-thumb' : ''" />
                     </div>
                 </div>
                 <div class="pro-preview" layout="column" flex="85" layout-align="center center" ng-show="which.images">
@@ -23,6 +23,8 @@
             {{which.techs}}
             <h3 class="gallery-head" ng-show="which.apis">APIs</h3>
             {{which.apis}}
+            <h3 class="gallery-head" ng-show="which.members">Total UI Team Members (myself included)</h3>
+            {{which.members}}
             <h3 class="gallery-head" ng-show="which.link || which.github">Links</h3>
             <span class="gallery-links" flex layout="row" layout-align="space-around center">
                 <a ng-href="{{which.link}}" target="__blank" class="link-span" ng-show="which.link">
