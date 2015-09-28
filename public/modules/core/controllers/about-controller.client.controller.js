@@ -3,11 +3,12 @@
 angular.module('core').controller('AboutControllerController', ['$scope', '$http', '$compile', '$interval',
 	function($scope, $http, $compile, $interval) {
 		$scope.showloader = true;
+        $scope.showLastfm = true;
 
 		function makeLastFmWidget(result) {
 			$scope.showloader = false;
 			console.log('lastfm', result);
-			for(var i = 0; i < 10; i++) {
+			for(var i = 0; i < 5; i++) {
 				var artistWeb = result[i].artist['#text'].split(' ').join('+'),
 					nameWeb = result[i].name.split(' ').join('+'),
 					ytUrl = 'https://www.youtube.com/results?search_query=' + artistWeb + '-' + nameWeb,
@@ -28,7 +29,7 @@ angular.module('core').controller('AboutControllerController', ['$scope', '$http
 			result = result.recenttracks.track;
 			makeLastFmWidget(result);
 		}).error(function(result) {
-
+			$scope.showLastfm = false;
 		});
 	}
 ]);

@@ -3,6 +3,7 @@
 .about-section {
   color: #f1f1f1;
   height: 77vh;
+  overflow: hidden;
   
   .about-me-bio-area {
 	.my-name {
@@ -106,5 +107,15 @@
 	.card-title {
 		margin-bottom: 0;
 	}
+
+  @media screen and (max-width: 713px) {
+	.small-desc-line {
+	  margin-bottom: 0;
+	}
+	
+	.last-fm-section {
+	  min-height: 16vh;
+	}
+  }
 
 }

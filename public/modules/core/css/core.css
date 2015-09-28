@@ -1,6 +1,7 @@
 .about-section {
   color: #f1f1f1;
   height: 77vh;
+  overflow: hidden;
 }
 .about-section .about-me-bio-area .my-name {
   font-size: 5em;
@@ -88,6 +89,14 @@
 }
 .about-section .card-title {
   margin-bottom: 0;
+}
+@media screen and (max-width: 713px) {
+  .about-section .small-desc-line {
+    margin-bottom: 0;
+  }
+  .about-section .last-fm-section {
+    min-height: 16vh;
+  }
 }
 
 input:-webkit-autofill {
@@ -239,6 +248,7 @@ md-sidenav.md-closed.md-locked-open-add-active {
 .about-section {
   color: #f1f1f1;
   height: 77vh;
+  overflow: hidden;
 }
 .about-section .about-me-bio-area .my-name {
   font-size: 5em;
@@ -327,6 +337,14 @@ md-sidenav.md-closed.md-locked-open-add-active {
 .about-section .card-title {
   margin-bottom: 0;
 }
+@media screen and (max-width: 713px) {
+  .about-section .small-desc-line {
+    margin-bottom: 0;
+  }
+  .about-section .last-fm-section {
+    min-height: 16vh;
+  }
+}
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 1000px #424242 inset;
   -webkit-text-fill-color: white !important;
@@ -360,6 +378,97 @@ input:-webkit-autofill {
 }
 .projects-section md-content {
   background: transparent;
+  overflow: hidden;
+  /* when hiding the picture */
+  /* when showing the picture */
+}
+@-webkit-keyframes flipInX {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+}
+@keyframes flipInX {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+}
+@-webkit-keyframes flipOutX {
+  from {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+  30% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    opacity: 0;
+  }
+}
+@keyframes flipOutX {
+  from {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+  30% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    opacity: 0;
+  }
 }
 .projects-section md-content md-toolbar {
   color: #f1f1f1;
@@ -390,11 +499,86 @@ input:-webkit-autofill {
 .projects-section md-content .projects-grid .port-tile {
   background-image: url('../../../assets/images/newPort.png');
 }
+.projects-section md-content .projects-grid .nda-tile {
+  background-image: url('../../../assets/images/no-image.png');
+}
 .projects-section md-content .projects-grid md-grid-tile-footer {
   background-color: rgba(0, 0, 0, 0.6);
 }
 .projects-section md-content .projects-grid md-grid-tile-footer h3 {
   color: #ffc107;
+}
+.projects-gallery {
+  max-height: 800px;
+}
+.projects-gallery .gallery-title {
+  margin-bottom: 0;
+  text-align: center;
+  color: #f1f1f1;
+  width: 100%;
+}
+.projects-gallery .gallery-title h1 {
+  display: inline-block;
+}
+.projects-gallery .gallery-title i {
+  top: 4px;
+  right: 4px;
+  position: absolute;
+  color: #ffc107;
+  cursor: pointer;
+}
+.projects-gallery .gallery-area {
+  padding: 8px;
+}
+.projects-gallery .gallery-area .vertical-film,
+.projects-gallery .gallery-area .photo-film,
+.projects-gallery .gallery-area .film-square {
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+ */
+  -o-user-select: none;
+  user-select: none;
+}
+.projects-gallery .gallery-area .photo-area .film-square {
+  max-width: 98%;
+  border: 1px solid #f1f1f1;
+  margin: 2px;
+  padding: 1px;
+  cursor: pointer;
+}
+.projects-gallery .gallery-area .photo-area .big-pic {
+  max-width: 96%;
+  max-height: 610px;
+  opacity: 0;
+}
+.projects-gallery .gallery-area .photo-area .fade-in {
+  transition: all 0.5s;
+  opacity: 1;
+}
+.projects-gallery .gallery-area .writeup-area {
+  background-color: #607d8b;
+  font-size: .9em;
+  padding: 12px;
+  margin: 0;
+}
+.projects-gallery .gallery-area .writeup-area .gallery-head {
+  color: #ffc107;
+  margin-bottom: 4px;
+}
+.projects-gallery .gallery-area .writeup-area a {
+  color: #f1f1f1;
+}
+.projects-gallery .gallery-area .writeup-area a:hover {
+  color: #ffc107;
+}
+.projects-gallery .gallery-area .writeup-area a:visited {
+  color: #424242;
+}
+.selected-thumb {
+  border: 2px solid #ffc107 !important;
 }
 @font-face {
   font-family: 'langdon';
@@ -405,9 +589,103 @@ body {
   font-family: 'Exo', sans-serif;
   color: #f1f1f1;
 }
+.no-scroll {
+  overflow: hidden !important;
+}
 
 .projects-section md-content {
   background: transparent;
+  overflow: hidden;
+  /* when hiding the picture */
+  /* when showing the picture */
+}
+@-webkit-keyframes flipInX {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+}
+@keyframes flipInX {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+}
+@-webkit-keyframes flipOutX {
+  from {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+  30% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    opacity: 0;
+  }
+}
+@keyframes flipOutX {
+  from {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+  30% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    opacity: 0;
+  }
 }
 .projects-section md-content md-toolbar {
   color: #f1f1f1;
@@ -438,10 +716,85 @@ body {
 .projects-section md-content .projects-grid .port-tile {
   background-image: url('../../../assets/images/newPort.png');
 }
+.projects-section md-content .projects-grid .nda-tile {
+  background-image: url('../../../assets/images/no-image.png');
+}
 .projects-section md-content .projects-grid md-grid-tile-footer {
   background-color: rgba(0, 0, 0, 0.6);
 }
 .projects-section md-content .projects-grid md-grid-tile-footer h3 {
   color: #ffc107;
+}
+.projects-gallery {
+  max-height: 800px;
+}
+.projects-gallery .gallery-title {
+  margin-bottom: 0;
+  text-align: center;
+  color: #f1f1f1;
+  width: 100%;
+}
+.projects-gallery .gallery-title h1 {
+  display: inline-block;
+}
+.projects-gallery .gallery-title i {
+  top: 4px;
+  right: 4px;
+  position: absolute;
+  color: #ffc107;
+  cursor: pointer;
+}
+.projects-gallery .gallery-area {
+  padding: 8px;
+}
+.projects-gallery .gallery-area .vertical-film,
+.projects-gallery .gallery-area .photo-film,
+.projects-gallery .gallery-area .film-square {
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+ */
+  -o-user-select: none;
+  user-select: none;
+}
+.projects-gallery .gallery-area .photo-area .film-square {
+  max-width: 98%;
+  border: 1px solid #f1f1f1;
+  margin: 2px;
+  padding: 1px;
+  cursor: pointer;
+}
+.projects-gallery .gallery-area .photo-area .big-pic {
+  max-width: 96%;
+  max-height: 610px;
+  opacity: 0;
+}
+.projects-gallery .gallery-area .photo-area .fade-in {
+  transition: all 0.5s;
+  opacity: 1;
+}
+.projects-gallery .gallery-area .writeup-area {
+  background-color: #607d8b;
+  font-size: .9em;
+  padding: 12px;
+  margin: 0;
+}
+.projects-gallery .gallery-area .writeup-area .gallery-head {
+  color: #ffc107;
+  margin-bottom: 4px;
+}
+.projects-gallery .gallery-area .writeup-area a {
+  color: #f1f1f1;
+}
+.projects-gallery .gallery-area .writeup-area a:hover {
+  color: #ffc107;
+}
+.projects-gallery .gallery-area .writeup-area a:visited {
+  color: #424242;
+}
+.selected-thumb {
+  border: 2px solid #ffc107 !important;
 }
 
