@@ -14,8 +14,6 @@ newportfolio-dev.0
 local.0
 local.ns
 newportfolio-dev.ns
-app/controllers/proxy.controller.js
-app/controllers/morning.controller.js
 data/journal/j._0
 data/journal/lsn
 data/local.0
@@ -23,3 +21,4 @@ data/local.ns
 data/mongod.lock
 data/test.0
 data/test.ns
+keys.json
