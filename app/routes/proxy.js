@@ -8,4 +8,5 @@ module.exports = function(app) {
 	app.route('/lastfm').get(proxy.lastfm);
 	app.route('/contact').post(proxy.sendMail);  // Contact form route
 	app.route('/morning').get(morning.getInfo);
+	app.route('/mygithub').get(proxy.myGithub);
 };

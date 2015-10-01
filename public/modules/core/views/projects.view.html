@@ -14,7 +14,7 @@
                         </md-radio-button>
                     </div>
                     <div flex="33" class="project-categories">
-                        <md-radio-button value="otherPro" aria-label="Other Projects">
+                        <md-radio-button value="otherPro" aria-label="Other Projects" ng-click="getGitHub()">
                             <label>Other Projects</label>
                         </md-radio-button>
                     </div>
@@ -67,5 +67,10 @@
                 </md-grid-tile-footer>
             </md-grid-tile>
         </md-grid-list>
+        <md-card class="other-projects" ng-show="radios === 'otherPro'">
+            <h2>Hover over a project name to see some information or click it to see the source on GitHub:</h2>
+            <br>
+            <div class="op-area"></div>
+        </md-card>
     </md-content>
 </section>
