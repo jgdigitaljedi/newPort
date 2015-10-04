@@ -1,4 +1,23 @@
 <section class="resume-section" ng-controller="ResumeControllerController">
-	<h1 class="md-display-2 amber-header">Resum&eacute;</h1>
-	<p>HTML5 resume and downloadable version</p>
+    <div layout="column" layout-align="center start">
+        <div class="resume-container">
+            <p>I plan on building a nice HTML resum&eacute; for this tab at some point, but I was eager to get onto the job search and wanted to get this site at least launched.
+                Click on the icon below to view or download my resume.</p>
+            <div layout="row" layout-align="center start" style="width: 100%">
+                <md-fab-speed-dial md-direction="down" class="md-scale" md-open="openFab">
+                    <md-fab-trigger aria-label="Resume format">
+                        <md-icon md-svg-icon="menu" class="menu-button";"></md-icon>
+                    </md-fab-trigger>
+                    <md-fab-actions>
+                        <md-button aria-label="PDF" ng-click="pdfClicked()">
+                            <md-icon class="resume-button"><i class="fa fa-file-pdf-o fa-2x"></i></md-icon>
+                        </md-button>
+                        <md-button aria-label="DOCX" ng-click="docClicked()">
+                            <md-icon class="resume-button"><i class="fa fa-file-word-o fa-2x"></i></md-icon>
+                        </md-button>
+                    </md-fab-actions>
+                </md-fab-speed-dial>
+            </div>
+        </div>
+    </div>
 </section>
