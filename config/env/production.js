@@ -7,14 +7,19 @@ module.exports = {
 			css: [
 				// 'public/lib/bootstrap/dist/css/bootstrap.min.css',
 				// 'public/lib/bootstrap/dist/css/bootstrap-theme.min.css',
-				'public/lib/angular-material/angular-material.min.css'
+				'public/lib/angular-material/angular-material.min.css',
+				'public/modules/core/css/core.css',
+
 			],
 			js: [
 				'public/lib/angular/angular.min.js',
-				'public/lib/angular-resource/angular-resource.js', 
-				'public/lib/angular-cookies/angular-cookies.js', 
-				'public/lib/angular-animate/angular-animate.js', 
-				'public/lib/angular-touch/angular-touch.js', 
+				'public/lib/angular-resource/angular-resource.min.js',
+				'public/lib/angular-mocks/angular-mocks.js',
+				'public/lib/jquery/dist/jquery.min.js',
+				'public/lib/moment/min/moment.min.js',
+				'public/lib/angular-cookies/angular-cookies.min.js',
+				'public/lib/angular-animate/angular-animate.min.js',
+				'public/lib/angular-touch/angular-touch.min.js',
 				'public/lib/angular-sanitize/angular-sanitize.js', 
 				'public/lib/angular-ui-router/release/angular-ui-router.min.js',
 				'public/lib/angular-ui-utils/ui-utils.min.js',
@@ -23,7 +28,7 @@ module.exports = {
 			]
 		},
 		css: 'public/dist/application.min.css',
-		js: 'public/dist/application.min.js'
+		js: 'public/dist/application.js'
 	},
 	facebook: {
 		clientID: process.env.FACEBOOK_ID || 'APP_ID',

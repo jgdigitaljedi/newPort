@@ -49,54 +49,56 @@ module.exports = function(grunt) {
 					livereload: true
 				}
 			},
-      clientLESS: {
-        files: ['assets/less/*.less','public/modules/**/*.less'],
-        tasks: ['less']
-      }
+			clientLESS: {
+				files: ['assets/less/*.less','public/modules/**/*.less'],
+				tasks: ['less']
+			}
 		},
 		jshint: {
 			all: {
 				src: watchFiles.clientJS.concat(watchFiles.serverJS),
-				options: {
-					jshintrc: true
+					options: {
+						jshintrc: true
+					}
 				}
-			}
 		},
-		csslint: {
-			options: {
-				csslintrc: '.csslintrc',
-			},
-			all: {
-				src: watchFiles.clientCSS
-			}
-		},
-    less: {
-      development: {
-          options: {
-              paths: []
-          },
-          files: [{
-              src: ['assets/less/*.less', 'public/modules/**/*.less'],
-              dest: 'public/modules/core/css/core.css'
-          }]
-      },
-      production: {
-          options: {
-              paths: []
-          },
-          files: [{
-              src: ['assets/less/*.less', 'public/modules/**/*.less'],
-              dest: 'public/modules/core/css/core.css'
-          }]
-      }
-    },
+		//csslint: {
+		//	options: {
+		//		csslintrc: '.csslintrc',
+		//	},
+		//	all: {
+		//		src: watchFiles.clientCSS
+		//	}
+		//},
+    	less: {
+      		development: {
+				options: {
+					paths: []
+				},
+				files: [{
+					src: ['assets/less/*.less', 'public/modules/**/*.less'],
+					dest: 'public/modules/core/css/core.css'
+				}]
+      		},
+      		production: {
+          		options: {
+              		paths: []
+          		},
+          		files: [{
+              		src: ['assets/less/*.less', 'public/modules/**/*.less'],
+              		dest: 'public/dist/core.css'
+          		}]
+      		}
+    	},
 		uglify: {
 			production: {
 				options: {
 					mangle: false
 				},
-				files: {
-					'public/dist/application.min.js': 'public/dist/application.js'
+				my_target: {
+					files: {
+						'public/dist/application.min.js': ['public/modules/core/controllers/*.js']
+					}
 				}
 			}
 		},
@@ -152,19 +154,19 @@ module.exports = function(grunt) {
 			secure: {
 				NODE_ENV: 'secure'
 			}
-		},
-		mochaTest: {
-			src: watchFiles.mochaTests,
-			options: {
-				reporter: 'spec',
-				require: 'server.js'
-			}
-		},
-		karma: {
-			unit: {
-				configFile: 'karma.conf.js'
-			}
 		}
+		//mochaTest: {
+		//	src: watchFiles.mochaTests,
+		//	options: {
+		//		reporter: 'spec',
+		//		require: 'server.js'
+		//	}
+		//},
+		//karma: {
+		//	unit: {
+		//		configFile: 'karma.conf.js'
+		//	}
+		//}
 	});
 
 	// Load NPM tasks
@@ -195,7 +197,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('lint', ['jshint', 'less', 'csslint']);
 
 	// Build task(s).
-	grunt.registerTask('build', ['lint', 'loadConfig', 'ngAnnotate', 'uglify', 'cssmin', 'less']);
+	grunt.registerTask('build', ['loadConfig', 'ngAnnotate', 'uglify', 'less', 'cssmin']);
 
 	// Test task.
 	grunt.registerTask('test', ['env:test', 'mochaTest', 'karma:unit']);
