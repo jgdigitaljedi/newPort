@@ -20,9 +20,9 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
 		function toggleUsersList() {
             $mdSidenav('left').toggle();
         }
-		$scope.makeRoute = function (which) {
-            //$location.path() = '/' + which;
-        }
+        //$scope.makeRoute = function (which) {
+        //    //$location.path() = '/' + which;
+        //};
 
         var self = this;
         

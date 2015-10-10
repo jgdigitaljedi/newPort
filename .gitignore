@@ -22,3 +22,4 @@ data/mongod.lock
 data/test.0
 data/test.ns
 keys.json
+public/dist/
