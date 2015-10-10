@@ -12,8 +12,9 @@ module.exports = {
 
 			],
 			js: [
-				'public/lib/angular/angular.min.js',
+				'public/lib/angular/angular.js',
 				'public/lib/angular-resource/angular-resource.min.js',
+				'public/lib/angular-aria/angular-aria.min.js',
 				'public/lib/angular-mocks/angular-mocks.js',
 				'public/lib/jquery/dist/jquery.min.js',
 				'public/lib/moment/min/moment.min.js',

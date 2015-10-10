@@ -7,8 +7,8 @@ angular.module('core').factory('Geolocateme', ['$rootScope',
 			setLocationVar: function() {
 				function getLocation(location) {
 				    	$rootScope.currentLocale = {'latitude': location.coords.latitude, 'longitude': location.coords.longitude, 'accuracy': location.coords.accuracy, 'error': 'none'};
-						$rootScope.$broadcast('locationIsSet');
 						sessionStorage.setItem('geoLocation', JSON.stringify($rootScope.currentLocale));
+						$rootScope.$broadcast('locationIsSet');
 				}
 
 				function localeDenied(error) {

@@ -4,7 +4,7 @@
 angular.module(ApplicationConfiguration.applicationModuleName, ApplicationConfiguration.applicationModuleVendorDependencies);
 
 // Setting HTML5 Location Mode
-angular.module(ApplicationConfiguration.applicationModuleName).config(['$locationProvider',  '$mdThemingProvider', '$mdIconProvider',
+angular.module(ApplicationConfiguration.applicationModuleName).config(['$locationProvider', '$mdThemingProvider', '$mdIconProvider',
 	function($locationProvider, $mdThemingProvider, $mdIconProvider) {
 		$locationProvider.html5Mode({enabled: true, requireBase: false}).hashPrefix('!');
 

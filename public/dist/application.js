@@ -27,7 +27,7 @@ var ApplicationConfiguration = (function() {
 angular.module(ApplicationConfiguration.applicationModuleName, ApplicationConfiguration.applicationModuleVendorDependencies);
 
 // Setting HTML5 Location Mode
-angular.module(ApplicationConfiguration.applicationModuleName).config(['$locationProvider',  '$mdThemingProvider', '$mdIconProvider',
+angular.module(ApplicationConfiguration.applicationModuleName).config(['$locationProvider', '$mdThemingProvider', '$mdIconProvider',
 	function($locationProvider, $mdThemingProvider, $mdIconProvider) {
 		$locationProvider.html5Mode({enabled: true, requireBase: false}).hashPrefix('!');
 
@@ -55,6 +55,7 @@ angular.element(document).ready(function() {
 	//Then init the app
 	angular.bootstrap(document, [ApplicationConfiguration.applicationModuleName]);
 });
+
 'use strict';
 
 // Use Applicaion configuration module to register a new module
@@ -595,8 +596,8 @@ angular.module('core').factory('Geolocateme', ['$rootScope',
 			setLocationVar: function() {
 				function getLocation(location) {
 				    	$rootScope.currentLocale = {'latitude': location.coords.latitude, 'longitude': location.coords.longitude, 'accuracy': location.coords.accuracy, 'error': 'none'};
-						$rootScope.$broadcast('locationIsSet');
 						sessionStorage.setItem('geoLocation', JSON.stringify($rootScope.currentLocale));
+						$rootScope.$broadcast('locationIsSet');
 				}
 
 				function localeDenied(error) {
@@ -615,6 +616,7 @@ angular.module('core').factory('Geolocateme', ['$rootScope',
 		};
 	}
 ]);
+
 'use strict';
 
 //Menu service used for managing  menus
