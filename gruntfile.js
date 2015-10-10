@@ -1,6 +1,7 @@
 'use strict';
 
 module.exports = function(grunt) {
+	grunt.loadNpmTasks('grunt-postcss');
 	// Unified Watch Object
 	var watchFiles = {
 		serverViews: ['app/views/**/*.*'],
@@ -70,6 +71,19 @@ module.exports = function(grunt) {
 		//		src: watchFiles.clientCSS
 		//	}
 		//},
+		postcss: {
+			options: {
+				map: true,
+				processors: [
+					require('autoprefixer')({
+						browsers: ['last 2 versions', 'ie >= 8']
+					})
+				]
+			},
+			dist: {
+				src: 'public/dist/core.css'
+			}
+		},
     	less: {
       		development: {
 				options: {
@@ -91,16 +105,15 @@ module.exports = function(grunt) {
       		}
     	},
 		uglify: {
-			production: {
-				options: {
-					mangle: false
-				},
-				my_target: {
-					files: {
-						'public/dist/application.min.js': ['public/modules/core/controllers/*.js']
-					}
-				}
-			}
+            //options: {
+            //	mangle: false
+            //},
+            my_target: {
+                files: [{
+                    src: 'public/modules/core/controllers/*.js',
+                    dest: 'public/dist/controllers.js'
+                }]
+            }
 		},
 		cssmin: {
 			combine: {
@@ -197,7 +210,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('lint', ['jshint', 'less', 'csslint']);
 
 	// Build task(s).
-	grunt.registerTask('build', ['loadConfig', 'ngAnnotate', 'uglify', 'less', 'cssmin']);
+	grunt.registerTask('build', ['loadConfig', 'ngAnnotate', 'uglify', 'less', 'postcss', 'cssmin']);
 
 	// Test task.
 	grunt.registerTask('test', ['env:test', 'mochaTest', 'karma:unit']);

@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('core').controller('HeaderController', ['$scope', 'Authentication', 'Menus', '$mdSidenav', 'Geolocateme', 'Weather', '$rootScope', '$http',
-	function($scope, Authentication, Menus, $mdSidenav, Geolocateme, Weather, $rootScope, $http) {
+angular.module('core').controller('HeaderController', ['$scope', 'Authentication', 'Menus', '$mdSidenav', 'Geolocateme', 'Weather', '$rootScope',
+	function($scope, Authentication, Menus, $mdSidenav, Geolocateme, Weather, $rootScope) {
 		$scope.authentication = Authentication;
 		$scope.isCollapsed = false;
 		$scope.currentTemp = '';
@@ -16,9 +16,7 @@ angular.module('core').controller('HeaderController', ['$scope', 'Authentication
 	        availableDirections: ['up', 'down', 'left', 'right'],
 	        selectedDirection: 'right'
 	    };
-	    //$http.get('/lastfm').success(function(response) {
-	    //	console.log('lastfm', response);
-	    //});
+        // TODO: make weather area responsive or get rid of it in mobile view
 
 		function callWeather() {
 			Weather.getConditions($rootScope.currentLocale.latitude + ',' + $rootScope.currentLocale.longitude).then(function(data) {

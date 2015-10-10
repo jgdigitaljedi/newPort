@@ -184,6 +184,7 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 		// Redirect to home view when route not found
 		$urlRouterProvider.otherwise('/');
 
+        // TODO: make unique routes for each tab view
 		// Home state routing
 		$stateProvider.
 		state('home', {
@@ -192,10 +193,11 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 		});
 	}
 ]);
+
 'use strict';
 
-angular.module('core').controller('AboutControllerController', ['$scope', '$http', '$compile', '$interval',
-	function($scope, $http, $compile, $interval) {
+angular.module('core').controller('AboutControllerController', ['$scope', '$http', '$compile',
+	function($scope, $http, $compile) {
 		$scope.showloader = true;
         $scope.showLastfm = true;
 
@@ -232,6 +234,7 @@ angular.module('core').controller('AboutControllerController', ['$scope', '$http
 
 angular.module('core').controller('ContactControllerController', ['$scope', '$http', '$mdDialog',
 	function($scope, $http, $mdDialog) {
+		// TODO: fix success and failure modals and add loading animation while sending
 		$scope.sendEmail = function(user) {
 			$http.post('/contact', {
 				firstName: user.firstName,
@@ -285,14 +288,16 @@ angular.module('core').controller('ContactControllerController', ['$scope', '$ht
 
 angular.module('core').controller('FunControllerController', ['$scope',
 	function($scope) {
+		//TODO: rewrite restaurant roulette here because your old version was written before you knew anything about Angular
 		// Fun controller controller logic
 		// ...
 	}
 ]);
+
 'use strict';
 
-angular.module('core').controller('HeaderController', ['$scope', 'Authentication', 'Menus', '$mdSidenav', 'Geolocateme', 'Weather', '$rootScope', '$http',
-	function($scope, Authentication, Menus, $mdSidenav, Geolocateme, Weather, $rootScope, $http) {
+angular.module('core').controller('HeaderController', ['$scope', 'Authentication', 'Menus', '$mdSidenav', 'Geolocateme', 'Weather', '$rootScope',
+	function($scope, Authentication, Menus, $mdSidenav, Geolocateme, Weather, $rootScope) {
 		$scope.authentication = Authentication;
 		$scope.isCollapsed = false;
 		$scope.currentTemp = '';
@@ -307,9 +312,7 @@ angular.module('core').controller('HeaderController', ['$scope', 'Authentication
 	        availableDirections: ['up', 'down', 'left', 'right'],
 	        selectedDirection: 'right'
 	    };
-	    //$http.get('/lastfm').success(function(response) {
-	    //	console.log('lastfm', response);
-	    //});
+        // TODO: make weather area responsive or get rid of it in mobile view
 
 		function callWeather() {
 			Weather.getConditions($rootScope.currentLocale.latitude + ',' + $rootScope.currentLocale.longitude).then(function(data) {
@@ -333,9 +336,10 @@ angular.module('core').controller('HeaderController', ['$scope', 'Authentication
 'use strict';
 
 
-angular.module('core').controller('HomeController', ['$scope', 'Authentication', '$mdSidenav', '$timeout',
-	function($scope, Authentication, $mdSidenav, $timeout) {
+angular.module('core').controller('HomeController', ['$scope', 'Authentication', '$mdSidenav',
+	function($scope, Authentication, $mdSidenav) {
 		// This provides Authentication context which I'll probably never use but it's here in case I do.
+        // TODO: consider making sidenav for mobile view instead of tabs
 		$scope.authentication = Authentication;
 		$scope.socialFab = {
 	        topDirections: ['left', 'up'],
@@ -350,6 +354,9 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
 
 		function toggleUsersList() {
             $mdSidenav('left').toggle();
+        }
+		$scope.makeRoute = function (which) {
+            //$location.path() = '/' + which;
         }
 
         var self = this;
@@ -366,6 +373,7 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
 
 angular.module('core').controller('ProjectsControllerController', ['$scope', '$mdDialog', '$timeout', '$http', '$compile', '$window',
 	function($scope, $mdDialog, $timeout, $http, $compile, $window) {
+        // TODO: make modals more responsive an look better
 		$scope.radios = 'sidePro';
 		$scope.proj = {
 			dash: {
@@ -535,6 +543,8 @@ angular.module('core').controller('ProjectsControllerController', ['$scope', '$m
 
 angular.module('core').controller('ResumeControllerController', ['$scope', '$window',
 	function($scope, $window) {
+		// TODO: update resume to better format
+		// TODO: make html resume as well
 		$scope.openFab = false;
 
 		$scope.docClicked = function () {
@@ -788,7 +798,6 @@ angular.module('core').service('Weather', ['$q', '$http',
 			forecastTimestamp = null;
 		return {
 			getConditions: function(locale) {
-				console.log('hit weather service');
 				var def = $q.defer();
 				nowTimestamp = moment().unix();
 				conditionsTimestamp = parseInt(sessionStorage.getItem(locale.toString() + 'weatherTimestamp'));
@@ -796,7 +805,6 @@ angular.module('core').service('Weather', ['$q', '$http',
 				if(!cachedConditions || nowTimestamp - conditionsTimestamp >= 900) { // get on first call then get again if cached for more that 15 minutes
 					$http.get('/conditions/' + locale)
 					.success(function(data, status, headers, config) {
-						console.log(data);
 						sessionStorage.setItem(locale.toString() + 'weatherTimestamp', moment().unix().toString());
 						sessionStorage.setItem(locale.toString() + 'conditions', JSON.stringify(data.current_observation));
 				        def.resolve(data.current_observation);

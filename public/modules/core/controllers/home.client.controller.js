@@ -1,9 +1,10 @@
 'use strict';
 
 
-angular.module('core').controller('HomeController', ['$scope', 'Authentication', '$mdSidenav', '$timeout',
-	function($scope, Authentication, $mdSidenav, $timeout) {
+angular.module('core').controller('HomeController', ['$scope', 'Authentication', '$mdSidenav',
+	function($scope, Authentication, $mdSidenav) {
 		// This provides Authentication context which I'll probably never use but it's here in case I do.
+        // TODO: consider making sidenav for mobile view instead of tabs
 		$scope.authentication = Authentication;
 		$scope.socialFab = {
 	        topDirections: ['left', 'up'],
@@ -18,6 +19,9 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
 
 		function toggleUsersList() {
             $mdSidenav('left').toggle();
+        }
+		$scope.makeRoute = function (which) {
+            //$location.path() = '/' + which;
         }
 
         var self = this;

@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('core').controller('AboutControllerController', ['$scope', '$http', '$compile', '$interval',
-	function($scope, $http, $compile, $interval) {
+angular.module('core').controller('AboutControllerController', ['$scope', '$http', '$compile',
+	function($scope, $http, $compile) {
 		$scope.showloader = true;
         $scope.showLastfm = true;
 

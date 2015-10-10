@@ -3,6 +3,7 @@
 
 angular.module('core').controller('ProjectsControllerController', ['$scope', '$mdDialog', '$timeout', '$http', '$compile', '$window',
 	function($scope, $mdDialog, $timeout, $http, $compile, $window) {
+        // TODO: make modals more responsive an look better
 		$scope.radios = 'sidePro';
 		$scope.proj = {
 			dash: {
