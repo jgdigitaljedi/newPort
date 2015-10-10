@@ -3,7 +3,7 @@
 var request = require('request'),
 	nodemailer = require('nodemailer'),
 	smtpTransport = require('nodemailer-smtp-transport'),
-	keys = require("../../keys.json");
+	keys = require('../../keys.json');
 	
 exports.conditions = function(req, res) {
 	//console.log('weather conditions proxy used', req.params.loc);

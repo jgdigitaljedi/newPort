@@ -3,10 +3,6 @@
 angular.module('core').controller('ContactControllerController', ['$scope', '$http', '$mdDialog',
 	function($scope, $http, $mdDialog) {
 		$scope.sendEmail = function(user) {
-			console.log('first name', user.firstName);
-			console.log('last name', user.lastName);
-			console.log('email', user.email);
-			console.log('comments', user.comments);
 			$http.post('/contact', {
 				firstName: user.firstName,
 				email: user.email,
@@ -49,7 +45,7 @@ angular.module('core').controller('ContactControllerController', ['$scope', '$ht
 
 			$scope.closeDialog = function() {
 				$mdDialog.hide();
-			}
+			};
 		};
 		
 	}

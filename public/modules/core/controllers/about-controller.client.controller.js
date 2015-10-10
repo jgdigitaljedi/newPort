@@ -7,7 +7,6 @@ angular.module('core').controller('AboutControllerController', ['$scope', '$http
 
 		function makeLastFmWidget(result) {
 			$scope.showloader = false;
-			console.log('lastfm', result);
 			for(var i = 0; i < 5; i++) {
 				var artistWeb = result[i].artist['#text'].split(' ').join('+'),
 					nameWeb = result[i].name.split(' ').join('+'),
@@ -16,13 +15,13 @@ angular.module('core').controller('AboutControllerController', ['$scope', '$http
 					template = $compile('<a href="' + ytUrl + '" target=\'__blank\'><img src="' + albumImage +
 						'" class="song-image"/><md-tooltip style="color: black;">' + result[i].artist['#text'] + ' / ' + result[i].name +
 						'</md-tooltip></a>')($scope);
-				$('#lastfm-widget').append(template);
+				angular.element( document.querySelector('#lastfm-widget')).append(template);
 
 			}
 			var lastfmSite = $compile('<a href="http://www.last.fm/user/joeygstrings" target=\'__blank\'>' +
 				'<img class="lastfm-ender" src="assets/images/lastfm-icon.png" />' +
 				'<md-tooltip style="color: black;">My Lastfm Profile</md-tooltip>')($scope);
-			$('#lastfm-widget').append(lastfmSite);
+			angular.element( document.querySelector('#lastfm-widget')).append(lastfmSite);
 
 		}
 

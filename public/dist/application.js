@@ -201,7 +201,6 @@ angular.module('core').controller('AboutControllerController', ['$scope', '$http
 
 		function makeLastFmWidget(result) {
 			$scope.showloader = false;
-			console.log('lastfm', result);
 			for(var i = 0; i < 5; i++) {
 				var artistWeb = result[i].artist['#text'].split(' ').join('+'),
 					nameWeb = result[i].name.split(' ').join('+'),
@@ -210,13 +209,13 @@ angular.module('core').controller('AboutControllerController', ['$scope', '$http
 					template = $compile('<a href="' + ytUrl + '" target=\'__blank\'><img src="' + albumImage +
 						'" class="song-image"/><md-tooltip style="color: black;">' + result[i].artist['#text'] + ' / ' + result[i].name +
 						'</md-tooltip></a>')($scope);
-				$('#lastfm-widget').append(template);
+				angular.element( document.querySelector('#lastfm-widget')).append(template);
 
 			}
 			var lastfmSite = $compile('<a href="http://www.last.fm/user/joeygstrings" target=\'__blank\'>' +
 				'<img class="lastfm-ender" src="assets/images/lastfm-icon.png" />' +
 				'<md-tooltip style="color: black;">My Lastfm Profile</md-tooltip>')($scope);
-			$('#lastfm-widget').append(lastfmSite);
+			angular.element( document.querySelector('#lastfm-widget')).append(lastfmSite);
 
 		}
 
@@ -234,10 +233,6 @@ angular.module('core').controller('AboutControllerController', ['$scope', '$http
 angular.module('core').controller('ContactControllerController', ['$scope', '$http', '$mdDialog',
 	function($scope, $http, $mdDialog) {
 		$scope.sendEmail = function(user) {
-			console.log('first name', user.firstName);
-			console.log('last name', user.lastName);
-			console.log('email', user.email);
-			console.log('comments', user.comments);
 			$http.post('/contact', {
 				firstName: user.firstName,
 				email: user.email,
@@ -280,11 +275,12 @@ angular.module('core').controller('ContactControllerController', ['$scope', '$ht
 
 			$scope.closeDialog = function() {
 				$mdDialog.hide();
-			}
+			};
 		};
 		
 	}
 ]);
+
 'use strict';
 
 angular.module('core').controller('FunControllerController', ['$scope',
@@ -311,14 +307,12 @@ angular.module('core').controller('HeaderController', ['$scope', 'Authentication
 	        availableDirections: ['up', 'down', 'left', 'right'],
 	        selectedDirection: 'right'
 	    };
-	    $http.get('/lastfm').success(function(response) {
-	    	console.log('lastfm', response);
-	    });
+	    //$http.get('/lastfm').success(function(response) {
+	    //	console.log('lastfm', response);
+	    //});
 
 		function callWeather() {
-			console.log('weatherCalled', $rootScope.currentLocale);
 			Weather.getConditions($rootScope.currentLocale.latitude + ',' + $rootScope.currentLocale.longitude).then(function(data) {
-				console.log('data', data);
 				$scope.currentTemp = data.temp_f;
 				$scope.geoIcon = '/assets/images/' + data.icon + '.png';
 				$scope.userCity = data.display_location.city;
@@ -326,10 +320,8 @@ angular.module('core').controller('HeaderController', ['$scope', 'Authentication
 		}
 		if(!sessionStorage.getItem('geoLocation')) {
 			Geolocateme.setLocationVar();
-			console.log('called location service');
 		} else {
 			$rootScope.currentLocale = JSON.parse(sessionStorage.getItem('geoLocation'));
-			console.log('used session storage', $rootScope.currentLocale);
 			callWeather();
 		}
 		$rootScope.$on('locationIsSet', function() {
@@ -337,6 +329,7 @@ angular.module('core').controller('HeaderController', ['$scope', 'Authentication
 		});
 	}
 ]);
+
 'use strict';
 
 
@@ -369,6 +362,7 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
 ]);
 
 'use strict';
+/* globals moment */
 
 angular.module('core').controller('ProjectsControllerController', ['$scope', '$mdDialog', '$timeout', '$http', '$compile', '$window',
 	function($scope, $mdDialog, $timeout, $http, $compile, $window) {
@@ -514,7 +508,6 @@ angular.module('core').controller('ProjectsControllerController', ['$scope', '$m
         };
 
         $scope.openGhProject = function (url) {
-            console.log('event', url);
             $window.open(url, '_blank');
         };
 
@@ -523,7 +516,6 @@ angular.module('core').controller('ProjectsControllerController', ['$scope', '$m
             method: 'GET',
             url: '/mygithub'
         }).then(function successCallback (response) {
-            console.log('github info', response);
             var rLen = response.data.length;
             for (var i = 0; i < rLen; i++) {
                 var tooltipString = 'Language: ' + (response.data[i].language ? response.data[i].language : 'Unknown') + ' / Last Updated: ' +
@@ -562,9 +554,9 @@ angular.module('core').directive('fadeIn', [
 		return {
 			restrict: 'A',
 			link: function($scope, $element, attrs){
-				$element.addClass("ng-hide-remove");
+				$element.addClass('ng-hide-remove');
 				$element.bind('load', function() {
-					$element.addClass("ng-hide-add");
+					$element.addClass('ng-hide-add');
 				});
 			}
 		};

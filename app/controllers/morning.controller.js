@@ -1,7 +1,7 @@
 'use strict';
 
 var express = require('express'),
-    keys = require("../../keys.json"),
+    keys = require('../../keys.json'),
     app = express(),
     http = require('http'),
     mornObj = {},
@@ -56,7 +56,7 @@ function getForecast(res) {
             response.on('end', function () {
                 var parsed = JSON.parse(body);
                 mornObj.forecast = parsed.forecast.txt_forecast.forecastday[0].fcttext;
-                mornObj.rain = parsed.forecast.txt_forecast.forecastday[0]['pop'];
+                mornObj.rain = parsed.forecast.txt_forecast.forecastday[0]['pop']; // jshint ignore:line
                 mornObj.high = Math.round(parsed.forecast.simpleforecast.forecastday[0].high.fahrenheit);
                 mornObj.low = Math.round(parsed.forecast.simpleforecast.forecastday[0].low.fahrenheit);
                 getCalendar(res);
@@ -113,4 +113,4 @@ function getTraffic(res) {
 
 exports.getInfo = function(req, res) {
     getTraffic(res);
-}
+};

@@ -11,7 +11,6 @@ angular.module('core').service('Weather', ['$q', '$http',
 			forecastTimestamp = null;
 		return {
 			getConditions: function(locale) {
-				console.log('hit weather service');
 				var def = $q.defer();
 				nowTimestamp = moment().unix();
 				conditionsTimestamp = parseInt(sessionStorage.getItem(locale.toString() + 'weatherTimestamp'));
@@ -19,7 +18,6 @@ angular.module('core').service('Weather', ['$q', '$http',
 				if(!cachedConditions || nowTimestamp - conditionsTimestamp >= 900) { // get on first call then get again if cached for more that 15 minutes
 					$http.get('/conditions/' + locale)
 					.success(function(data, status, headers, config) {
-						console.log(data);
 						sessionStorage.setItem(locale.toString() + 'weatherTimestamp', moment().unix().toString());
 						sessionStorage.setItem(locale.toString() + 'conditions', JSON.stringify(data.current_observation));
 				        def.resolve(data.current_observation);

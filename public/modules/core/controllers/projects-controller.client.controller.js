@@ -1,4 +1,5 @@
 'use strict';
+/* globals moment */
 
 angular.module('core').controller('ProjectsControllerController', ['$scope', '$mdDialog', '$timeout', '$http', '$compile', '$window',
 	function($scope, $mdDialog, $timeout, $http, $compile, $window) {
@@ -144,7 +145,6 @@ angular.module('core').controller('ProjectsControllerController', ['$scope', '$m
         };
 
         $scope.openGhProject = function (url) {
-            console.log('event', url);
             $window.open(url, '_blank');
         };
 
@@ -153,7 +153,6 @@ angular.module('core').controller('ProjectsControllerController', ['$scope', '$m
             method: 'GET',
             url: '/mygithub'
         }).then(function successCallback (response) {
-            console.log('github info', response);
             var rLen = response.data.length;
             for (var i = 0; i < rLen; i++) {
                 var tooltipString = 'Language: ' + (response.data[i].language ? response.data[i].language : 'Unknown') + ' / Last Updated: ' +

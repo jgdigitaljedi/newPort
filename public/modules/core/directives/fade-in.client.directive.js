@@ -5,9 +5,9 @@ angular.module('core').directive('fadeIn', [
 		return {
 			restrict: 'A',
 			link: function($scope, $element, attrs){
-				$element.addClass("ng-hide-remove");
+				$element.addClass('ng-hide-remove');
 				$element.bind('load', function() {
-					$element.addClass("ng-hide-add");
+					$element.addClass('ng-hide-add');
 				});
 			}
 		};
