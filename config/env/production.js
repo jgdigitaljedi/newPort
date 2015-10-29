@@ -7,8 +7,8 @@ module.exports = {
 			css: [
 				// 'public/lib/bootstrap/dist/css/bootstrap.min.css',
 				// 'public/lib/bootstrap/dist/css/bootstrap-theme.min.css',
-				'public/lib/angular-material/angular-material.min.css',
-				'public/modules/core/css/core.css',
+				'public/lib/angular-material/angular-material.min.css'
+				//'public/modules/core/css/core.css',
 
 			],
 			js: [
@@ -29,7 +29,7 @@ module.exports = {
 			]
 		},
 		css: 'public/dist/application.min.css',
-		js: ['public/dist/application.min.js', 'public/dist/controllers.js']
+		js: ['public/dist/app.js']
 	},
 	facebook: {
 		clientID: process.env.FACEBOOK_ID || 'APP_ID',

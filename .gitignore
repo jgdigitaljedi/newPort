@@ -4,6 +4,7 @@
 npm-debug.log
 node_modules/
 public/lib
+public/dist/
 app/tests/coverage/
 .bower-*/
 .idea/
@@ -22,4 +23,3 @@ data/mongod.lock
 data/test.0
 data/test.ns
 keys.json
-public/dist/

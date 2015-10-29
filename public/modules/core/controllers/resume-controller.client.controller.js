@@ -7,11 +7,15 @@ angular.module('core').controller('ResumeControllerController', ['$scope', '$win
 		$scope.openFab = false;
 
 		$scope.docClicked = function () {
-            $window.open('../../assets/resume/Joey_Gauthier_resume_word.docx', '_blank');
+            $window.open('../../assets/resume/resume2015.docx', '_blank');
 		};
 
 		$scope.pdfClicked = function () {
-			$window.open('../../assets/resume/Joey_Gauthier_resume_compressed.pdf', '_blank');
+			$window.open('../../assets/resume/resume2015.pdf', '_blank');
+		};
+
+		$scope.odtClicked = function () {
+			$window.open('../../assets/resume/resume2015.odt', '_blank');
 		};
 	}
 ]);

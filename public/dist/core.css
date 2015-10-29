@@ -386,7 +386,6 @@ input:-webkit-autofill {
 }
 .projects-section md-content {
   background: transparent;
-  overflow: hidden;
   /* when hiding the picture */
   /* when showing the picture */
 }
@@ -570,8 +569,9 @@ input:-webkit-autofill {
   cursor: pointer;
 }
 .projects-gallery .gallery-area .photo-area .big-pic {
-  max-width: 96%;
-  max-height: 610px;
+  max-width: 600px;
+  max-height: 600px;
+  width: 97%;
   opacity: 0;
 }
 .projects-gallery .gallery-area .photo-area .fade-in {
@@ -659,7 +659,6 @@ body {
 
 .projects-section md-content {
   background: transparent;
-  overflow: hidden;
   /* when hiding the picture */
   /* when showing the picture */
 }
@@ -843,8 +842,9 @@ body {
   cursor: pointer;
 }
 .projects-gallery .gallery-area .photo-area .big-pic {
-  max-width: 96%;
-  max-height: 610px;
+  max-width: 600px;
+  max-height: 600px;
+  width: 97%;
   opacity: 0;
 }
 .projects-gallery .gallery-area .photo-area .fade-in {

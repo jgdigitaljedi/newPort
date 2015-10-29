@@ -2,6 +2,7 @@
 
 module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-postcss');
+    grunt.loadNpmTasks('grunt-contrib-concat');
 	// Unified Watch Object
 	var watchFiles = {
 		serverViews: ['app/views/**/*.*'],
@@ -84,6 +85,12 @@ module.exports = function(grunt) {
 				src: 'public/dist/core.css'
 			}
 		},
+        concat: {
+            js: { //target
+                src: ['public/dist/*.js'],
+                dest: 'public/dist/concatted.js'
+            }
+        },
     	less: {
       		development: {
 				options: {
@@ -110,8 +117,8 @@ module.exports = function(grunt) {
             //},
             my_target: {
                 files: [{
-                    src: 'public/modules/core/controllers/*.js',
-                    dest: 'public/dist/controllers.js'
+                    src: ['public/dist/concatted.js'],
+                    dest: 'public/dist/app.js'
                 }]
             }
 		},
@@ -146,9 +153,24 @@ module.exports = function(grunt) {
 			}
 		},
 		ngAnnotate: {
+            options: {
+                singleQuotes: true
+            },
 			production: {
 				files: {
-					'public/dist/application.js': '<%= applicationJavaScriptFiles %>'
+					//'public/dist/application.js': '<%= applicationJavaScriptFiles %>'
+					'public/dist/config.js': ['public/config.js'],
+					'public/dist/application.js': ['public/application.js'],
+					'public/dist/about.js': ['public/modules/core/controllers/about-controller.client.controller.js'],
+					'public/dist/contact.js': ['public/modules/core/controllers/contact-controller.client.controller.js'],
+					'public/dist/fun.js': ['public/modules/core/controllers/fun-controller.client.controller.js'],
+					'public/dist/header.js': ['public/modules/core/controllers/header-controller.client.controller.js'],
+					'public/dist/home.js': ['public/modules/core/controllers/home-controller.client.controller.js'],
+					'public/dist/projects.js': ['public/modules/controllers/core/projects-controller.client.controller.js'],
+					'public/dist/resume.js': ['public/modules/controllers/core/resume-controller.client.controller.js'],
+					'public/dist/menus.js': ['public/modules/core/services/menus.client.service.js'],
+					'public/dist/geo.js': ['public/modules/core/services/geolocate.client.service.js'],
+					'public/dist/weather.js': ['public/modules/core/services/weather.client.service.js']
 				}
 			}
 		},
@@ -210,7 +232,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('lint', ['jshint', 'less', 'csslint']);
 
 	// Build task(s).
-	grunt.registerTask('build', ['loadConfig', 'ngAnnotate', 'uglify', 'less', 'postcss', 'cssmin']);
+	grunt.registerTask('build', ['loadConfig', 'ngAnnotate', 'concat', 'uglify', 'less', 'postcss', 'cssmin']);
 
 	// Test task.
 	grunt.registerTask('test', ['env:test', 'mochaTest', 'karma:unit']);

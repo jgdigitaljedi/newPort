@@ -22,12 +22,11 @@ angular.module('core').controller('ProjectsControllerController', ['$scope', '$m
                 title: 'Texas Lassos Alumni Connect',
                 images: ['../../assets/images/lassos/lassos-gallery-1.png', '../../assets/images/lassos/lassos-gallery-2.png', '../../assets/images/lassos/lassos-gallery-3.png',
                     '../../assets/images/lassos/lassos_admin.png', '../../assets/images/lassos/lassos_profile.png'],
-                description: 'This application was built by request for the Texas Lassos Alumni Group. I worked on a team with two other development students' +
-                ' to create a privatized social network for this Alumni group. The application has a table for all alums and a table for alums who have joined the social' +
-                ' network. Upon signing up, the app notifies the admins that someone is pending approval, notifies the user they must wait for approval, and ' +
-                'looks for the user information in the alum table to see if it can move it to the active user table but still keep them inactive. After approval' +
-                ' the user is notified to log in and can fill out their profile, search for other alums, and more. Admins can import new alums via Excel sheet' +
-                ' and export the whole database to an Excel sheet as well.',
+                description: 'This application was built by request for the Texas Lassos Alumni Group. I worked on a team with two other developers' +
+                ' to create a private social network for the group. The app has a table for all alums and a table for alums who have joined the' +
+                ' network. Upon signing up, the app notifies the admins, tells the user they must wait for approval, and ' +
+                'looks for the user in the alum table to see if it can move their info to the active user table. After approval' +
+                ' the user is notified to log in and can edit their profile and use the app. Admins can import and export user info via Excel sheets.',
                 link: 'http://connect.lassoalumni.org/users/sign_in',
                 github: 'https://github.com/jgdigitaljedi/tx-lassos',
                 techs: 'Ruby on Rails, Devise gem, Roo gem, jQuery, Bootstrap'
