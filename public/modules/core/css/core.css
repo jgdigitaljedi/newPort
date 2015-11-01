@@ -597,6 +597,9 @@ input:-webkit-autofill {
 .projects-gallery .gallery-area .writeup-area a:visited {
   color: #424242;
 }
+.projects-gallery .gallery-area .writeup-area i {
+  margin-right: 12px;
+}
 .selected-thumb {
   border: 2px solid #ffc107 !important;
 }
@@ -869,6 +872,9 @@ body {
 }
 .projects-gallery .gallery-area .writeup-area a:visited {
   color: #424242;
+}
+.projects-gallery .gallery-area .writeup-area i {
+  margin-right: 12px;
 }
 .selected-thumb {
   border: 2px solid #ffc107 !important;

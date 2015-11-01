@@ -9,4 +9,5 @@ module.exports = function(app) {
 	app.route('/contact').post(proxy.sendMail);  // Contact form route
 	app.route('/morning').get(morning.getInfo);
 	app.route('/mygithub').get(proxy.myGithub);
+	app.route('/afterwork').get(morning.getHomeCommute);
 };

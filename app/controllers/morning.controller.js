@@ -14,37 +14,38 @@ function randomNum(num) {
     return Math.floor(Math.random() * num);
 }
 
-function organizeResponse(res) {
+function organizeResponse(res, anoon) {
     var currentBit = mornObj.curTemp ? '. Currently it is ' + mornObj.curTemp + ' degrees and ' + mornObj.curCondition : '. Current conditions not available',
         forecastBit = mornObj.forecast ? '. Forecast is ' + mornObj.forecast : '. Forecast not available',
         rainMessage = [' Better check to make sure you have an umbrella. There is a ' + mornObj.rain + ' percent chance of precipitation.',
             ' It\'s gonna be a wet one! Looks like there is a ' + mornObj.rain + ' percent chance of precipitation.',
             ' Expect to have soggy feet when you get to work because there is a ' + mornObj.rain + ' percent chance of precipitation.'],
         trafficTime = mornObj.traffic ? 'Today\'s commute should take about ' +  Math.round(mornObj.traffic.travelDurationTraffic / 60) + ' minutes' : 'Bing fucked up so no traffic data';
-    if (mornObj.low <= 50) {
-        var needCoat = coldMessage[randomNum(5)];
+    if (mornObj.low <= 50 && !anoon) {
+        var needCoat = coldMessage[randomNum(4)];
         currentBit += needCoat;
     }
-    if (mornObj.high >= 100) {
-        var texasDay = hotMessage[randomNum(5)];
+    if (mornObj.high >= 100 && !anoon) {
+        var texasDay = hotMessage[randomNum(4)];
         currentBit += texasDay;
     }
-    if (parseInt(mornObj.rain) >= 30) {
-        var wetOne = rainMessage[randomNum(4)];
+    if (parseInt(mornObj.rain && !anoon) >= 30) {
+        var wetOne = rainMessage[randomNum(3)];
         forecastBit += wetOne;
     }
 
     res.send(trafficTime + currentBit + forecastBit);
 }
 
-function getCalendar(res) {
-    organizeResponse(res);
+function getCalendar(res, anoon) {
+    // TODO: write in Google Calendar bit to get events for the day
+    organizeResponse(res, anoon);
 }
 
-function getForecast(res) {
+function getForecast(res, anoon) {
     http.get({
         host: 'api.wunderground.com',
-        path: '/api/' + keys.wu + '/forecast/q/TX/Austin.json'
+        path: '/api/' + keys.wu + '/forecast/q/TX/' + (anoon ? 'Manor' : 'Austin') + '.json'
     }, function (response) {
         var body = '';
         if (response.statusCode < 200 || response.statusCode > 299) {
@@ -59,16 +60,16 @@ function getForecast(res) {
                 mornObj.rain = parsed.forecast.txt_forecast.forecastday[0]['pop']; // jshint ignore:line
                 mornObj.high = Math.round(parsed.forecast.simpleforecast.forecastday[0].high.fahrenheit);
                 mornObj.low = Math.round(parsed.forecast.simpleforecast.forecastday[0].low.fahrenheit);
-                getCalendar(res);
+                getCalendar(res, anoon);
             });
         }
     });
 }
 
-function getConditions(res) {
+function getConditions(res, anoon) {
     http.get({
         host: 'api.wunderground.com',
-        path: '/api/' + keys.wu + '/conditions/q/TX/Austin.json'
+        path: '/api/' + keys.wu + '/conditions/q/TX/' + (anoon ? 'Manor' : 'Austin') + '.json'
     }, function (response) {
         var body = '';
         if (response.statusCode < 200 || response.statusCode > 299) {
@@ -82,18 +83,18 @@ function getConditions(res) {
                 mornObj.curTemp = Math.round(parsed.current_observation.temp_f);
                 mornObj.curCondition = parsed.current_observation.weather;
                 mornObj.precip = parsed.current_observation.precip_today_in;
-                getForecast(res);
+                getForecast(res, anoon);
             });
         }
     });
 }
 
-function getTraffic(res) {
+function getTraffic(res, anoon) {
     var home = encodeURI(keys.homeAdd),
         parking = encodeURI(keys.workAdd);
     http.get({
         host: 'dev.virtualearth.net',
-        path: '/REST/V1/Routes/Driving?wp.0=' + home + '&wp.1=' + parking + '&avoid=minimizeTolls&key=' + keys.bing
+        path: '/REST/V1/Routes/Driving?wp.0=' + (anoon ? parking : home) + '&wp.1=' + (anoon ? home : parking) + '&avoid=minimizeTolls&key=' + keys.bing
     }, function (response) {
         var body = '';
         if (response.statusCode < 200 || response.statusCode > 299) {
@@ -105,12 +106,16 @@ function getTraffic(res) {
             response.on('end', function () {
                 var parsed = JSON.parse(body);
                 mornObj.traffic = parsed.resourceSets[0].resources[0];
-                getConditions(res);
+                getConditions(res, anoon);
             });
         }
     });
 }
 
 exports.getInfo = function(req, res) {
-    getTraffic(res);
+    getTraffic(res, false);
+};
+
+exports.getHomeCommute = function (req, res) {
+    getTraffic(res, true);
 };
