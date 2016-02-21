@@ -36,6 +36,21 @@ exports.lastfm = function(req, res) {
 	);
 };
 
+exports.lastArt = function (req, res) {
+	var data = req.params.band,
+		theUrl =  'http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=' + data + '&api_key=' + keys.last + '&format=json';
+
+    function callback (error, response, body) {
+        if (!error && response.statusCode === 200) {
+            var obj = JSON.parse(body);
+            res.json(obj);
+        } else {
+            res.send('error dude!', req);
+        }
+    }
+    request({url: theUrl}, callback);
+};
+
 exports.sendMail = function(req, res) {
 	var company,
 		transporter = nodemailer.createTransport(

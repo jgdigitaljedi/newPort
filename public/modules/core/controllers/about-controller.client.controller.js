@@ -15,7 +15,25 @@ angular.module('core').controller('AboutControllerController', ['$scope', '$http
 					template = $compile('<a href="' + ytUrl + '" target=\'__blank\'><img src="' + albumImage +
 						'" class="song-image"/><md-tooltip style="color: black;">' + result[i].artist['#text'] + ' / ' + result[i].name +
 						'</md-tooltip></a>')($scope);
-				angular.element( document.querySelector('#lastfm-widget')).append(template);
+				    angular.element( document.querySelector('#lastfm-widget')).append(template);
+                    //if (result[i].image[1]['#text']) {
+                    //    albumImage = result[i].image[1]['#text'];
+                    //    var template = $compile('<a href="' + ytUrl + '" target=\'__blank\'><img src="' + result[i].image[1]['#text'] +
+                    //        '" class="song-image"/><md-tooltip style="color: black;">' + result[i].artist['#text'] + ' / ' + result[i].name +
+                    //        '</md-tooltip></a>')($scope);
+                    //    angular.element( document.querySelector('#lastfm-widget')).append(template);
+                    //} else {
+                    //    $http.get('/lastart/' + result[i].artist['#text']).then( function successCallback (response) {
+                    //        console.log('response', response.data.results.artistmatches.artist[0].image[1]['#text']);
+                    //        albumImage = response.data.results.artistmatches.artist[0].image[1]['#text'];
+                    //        var template = $compile('<a href="' + ytUrl + '" target=\'__blank\'><img src="' + albumImage +
+                    //            '" class="song-image"/><md-tooltip style="color: black;">' + result[i].artist['#text'] + ' / ' + result[i].name +
+                    //            '</md-tooltip></a>')($scope);
+                    //        angular.element( document.querySelector('#lastfm-widget')).append(template);
+                    //    }, function errorCallback (response) {
+                    //        console.log('epic fail', response);
+                    //    });
+                    //}
 
 			}
 			var lastfmSite = $compile('<a href="http://www.last.fm/user/joeygstrings" target=\'__blank\'>' +

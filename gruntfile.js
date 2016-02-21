@@ -7,10 +7,10 @@ module.exports = function(grunt) {
 	var watchFiles = {
 		serverViews: ['app/views/**/*.*'],
 		serverJS: ['gruntfile.js', 'server.js', 'config/**/*.js', 'app/**/*.js'],
-		clientViews: ['public/modules/**/views/**/*.html'],
+		clientViews: ['public/modules/**/views/**/*.html', 'public/modules/**/views/*.html'],
 		clientJS: ['public/js/*.js', 'public/modules/**/*.js'],
 		clientCSS: ['public/modules/**/*.css'],
-		mochaTests: ['app/tests/**/*.js'],
+		// mochaTests: ['app/tests/**/*.js'],
 		clientLESS: ['assets/less/*.less']
 	};
 
@@ -52,8 +52,11 @@ module.exports = function(grunt) {
 				}
 			},
 			clientLESS: {
-				files: ['assets/less/*.less','public/modules/**/*.less'],
-				tasks: ['less']
+				files: watchFiles.clientLESS,
+				tasks: ['less'],
+				options: {
+					livereload: true
+				}
 			}
 		},
 		jshint: {
@@ -220,7 +223,7 @@ module.exports = function(grunt) {
 	});
 
 	// Default task(s).
-	grunt.registerTask('default', ['lint', 'concurrent:default']);
+	grunt.registerTask('default', ['lint', 'less', 'concurrent:default']);
 
 	// Debug task.
 	grunt.registerTask('debug', ['lint', 'concurrent:debug']);

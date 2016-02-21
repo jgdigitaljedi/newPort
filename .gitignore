@@ -23,3 +23,5 @@ data/mongod.lock
 data/test.0
 data/test.ns
 keys.json
+newportfolio-dev.ns
+newportfolio-dev.0
