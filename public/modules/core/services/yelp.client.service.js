@@ -6,9 +6,9 @@ angular.module('core').service('Yelp', ['$q', '$http',
 
 
 		return {
-			getYelpInfo: function (request) {
+			getYelpInfo: function (lat, long) {
 				var def = $q.defer();
-				$http.get('/getYelpInfo/' + request)
+				$http.get('/getYelpInfo/' + lat + '/' + long)
 					.success(function (data, status, headers, config) {
 						def.resolve(JSON.parse(data.content));
 					})

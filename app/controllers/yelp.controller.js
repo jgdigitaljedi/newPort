@@ -12,12 +12,12 @@ var express = require('express'),
 	logger = require('tracer').colorConsole();
 
 exports.getYelpInfo = function(req, res) {
-	req = req.params.request;
+	req = req.params;
+	console.log('the req', req);
 	var httpMethod = 'GET',
 		url = 'http://api.yelp.com/v2/search',
 		default_parameters = {
-		    location: 'Austin',
-		    cll: req,
+		    ll: req.lat + ',' + req.long,
 		    sort: '1',
 		    term: 'food'
 		},

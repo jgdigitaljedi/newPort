@@ -12,5 +12,5 @@ module.exports = function(app) {
 	app.route('/morning').get(morning.getInfo);
 	app.route('/mygithub').get(proxy.myGithub);
 	app.route('/afterwork').get(morning.getHomeCommute);
-	app.route('/getYelpInfo/:request').get(yelp.getYelpInfo);
+	app.route('/getYelpInfo/:lat/:long').get(yelp.getYelpInfo);
 };

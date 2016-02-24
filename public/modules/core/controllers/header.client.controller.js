@@ -26,8 +26,8 @@ angular.module('core').controller('HeaderController', ['$scope', 'Authentication
 			});
 		}
 		function callYelp () {
-			var request = $rootScope.currentLocale.latitude + ',' + $rootScope.currentLocale.longitude;
-			Yelp.getYelpInfo(request).then(function (response) {
+			var request = {lat: $rootScope.currentLocale.latitude, long: $rootScope.currentLocale.longitude};
+			Yelp.getYelpInfo(request.lat, request.long).then(function (response) {
 				console.log('yelp response', response);
 			});
 		}
