@@ -30,6 +30,8 @@ module.exports = {
 				'public/lib/angular-material/angular-material.js',
 				'public/lib/moment/min/moment.min.js',
 				'public/lib/jquery/dist/jquery.min.js'
+				// 'public/lib/d3/d3.min.js',
+				// 'public/lib/d3-resume/d3-resume.min.js'
 				// 'public/lib//angular-material/modules/js/**/*.js'
 			]
 		},
