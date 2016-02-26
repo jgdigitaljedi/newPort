@@ -105,7 +105,7 @@ angular.module('core').controller('ResumeControllerController', ['$scope', '$win
 			var getPath = function (diameter, position)
 			{
 				var radius = diameter/2;
-				var height = position * (100 + radius * 0.7);
+				var height = position * (70 + radius * 0.7);
 				return 'M0,0 q '+radius+' '+height+' '+diameter+' 0 z';
 			};
 
@@ -249,13 +249,16 @@ angular.module('core').controller('ResumeControllerController', ['$scope', '$win
 		};
 
 		var resume = new D3Resume({
-		  	width: 900,
-		  	height: 500,
+		  	width: window.innerWidth - 50,
+		  	height: 470,
 		  	wrapperSelector: '#resume',
 		  	// dataUrl: 'resume.json',
 		  	getItemFillCollor: function (item) {
-		    	return '#' + (function co(lor){   return (lor +=
-		      		[0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f'][Math.floor(Math.random()*16)]) && (lor.length === 6) ?  lor : co(lor); })('');
+		  		var colorArr = ['#0D47A1', '#1A237E', '#C62828', '#00BCD4', '#43A047', '#F57C00', '#FBC02D', '#CDDC39',
+		  			'#EC407A', '#9C27B0', '#3F51B5', '#29B6F6', '#26A69A', '#F4511E'];
+		  		return colorArr[Math.floor(Math.random()*15)];
+		    	// return '#' + (function co(lor){   return (lor +=
+		      	//	[0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f'][Math.floor(Math.random()*16)]) && (lor.length === 6) ?  lor : co(lor); })('');
 		  	}
 		});
 	}

@@ -1,4 +1,4 @@
-'use strict';
+// 'use strict';
 /* jshint ignore:start */
 
 angular.module('core').factory('d3', [

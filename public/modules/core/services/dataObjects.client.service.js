@@ -6,41 +6,59 @@ angular.module('core').factory('Dataobjects', [
 	function() {
 		var resumeObject = {
 		    'experience':[
-		        {
-		            'type':'Work',
-		            'institution':'First job institution',
-		            'title':'The job title!',
-		            'from':'2006-05-01',
-		            'to':'2006-09-30',
-		            'description':'all what i have done \n and this is a second line',
+		    	{
+		            'type':'Employment',
+		            'institution':'AT&T Mobility',
+		            'title':'Customer Service Representative',
+		            'from':'2006-09-25',
+		            'to':'2008-04-01',
+		            'description':'Provided desktop and network IT solutions to clients. \n Wrote desktop applications to streamline work.',
 		            'default_item':false
 		        },
 		        {
-		            'type':'Trainee',
-		            'institution':'Seocond job institution',
-		            'title':'The jon title!',
-		            'from':'2006-05-01',
+		            'type':'Employment',
+		            'institution':'Partnership Broadband',
+		            'title':'Field Technician',
+		            'from':'2008-11-01',
+		            'to':'2014-07-12',
+		            'description':'Provided desktop and network IT solutions to clients. \n Wrote desktop applications to streamline work.',
+		            'default_item':false
+		        },
+		    	{
+		            'type':'Employment',
+		            'institution':'Mobile PC Experts',
+		            'title':'Owner/Technician',
+		            'from':'2008-01-01',
+		            'to':'2014-07-12',
+		            'description':'Provided desktop and network IT solutions to clients. \n Wrote desktop applications to streamline work.',
+		            'default_item':false
+		        },
+		        {
+		            'type':'Employment',
+		            'institution':'IBM',
+		            'title':'Desktop Services Technician',
+		            'from':'2008-11-01',
+		            'to':'2014-07-12',
+		            'description':'Provided desktop and network IT solutions to clients. \n Wrote desktop applications to streamline work.',
+		            'default_item':false
+		        },
+		        {
+		            'type':'Employment',
+		            'institution':'Schneider Electric',
+		            'title':'Software Engineer',
+		            'from':'2014-11-03',
 		            'to':null, /* because this is my current job, it doesn't have an end date */
-		            'description':'all what i have done \n and this is a second line',
+		            'description':'Built and deployed MEAN stack applications. \n Did things the Agile way and in a team environment.',
 		            'default_item':true
 		        }
 		    ],
 		    'study':[
 		        {
 		            'type':'Study',
-		            'institution':'Fist stydy',
-		            'title':'My title',
-		            'from':'2007-03-01',
-		            'to':'2011-12-20',
-		            'description':'',
-		            'default_item':false
-		        },
-		        {
-		            'type':'Study',
-		            'institution':'Also, I study another thing',
-		            'title':'IDK',
-		            'from':'2013-08-30',
-		            'to':null,
+		            'institution':'MakerSquare',
+		            'title':'student',
+		            'from':'2014-07-14',
+		            'to':'2014-10-03',
 		            'description':'',
 		            'default_item':false
 		        }

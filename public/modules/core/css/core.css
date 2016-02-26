@@ -725,6 +725,9 @@ input:-webkit-autofill {
 .selected-thumb {
   border: 2px solid #ffc107 !important;
 }
+.resume-section #resume svg text {
+  fill: #f1f1f1;
+}
 .resume-section .resume-container {
   width: 70%;
   margin: 0 auto;
@@ -1002,6 +1005,9 @@ body {
   border: 2px solid #ffc107 !important;
 }
 
+.resume-section #resume svg text {
+  fill: #f1f1f1;
+}
 .resume-section .resume-container {
   width: 70%;
   margin: 0 auto;
