@@ -1,4 +1,4 @@
-<div class="big-flat-header" data-ng-controller="HeaderController" flex>
+<div class="big-flat-header" data-ng-controller="HeaderController as headerVm" flex>
     <md-toolbar layout="row">
     	<div flex="33">
         	<h1 class="my-name">Joey Gauthier</h1>
@@ -18,7 +18,7 @@
 			</div>
 		</div>
 		<div id="weather-container" flex="33">
-			<h1 class="the-weather">{{userCity}}: {{currentTemp}}&deg;f </h1><img class="current-weather-icon" ng-src="{{geoIcon}}" />
+			<h1 class="the-weather" ng-show="headerVm.showWeather">{{headerVm.currentTemp}}&deg;f </h1><img class="current-weather-icon" ng-src="{{headerVm.geoIcon}}" />
 		</div>
     </md-toolbar>
 </div>

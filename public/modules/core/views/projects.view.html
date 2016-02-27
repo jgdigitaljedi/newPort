@@ -1,8 +1,8 @@
-<section class="projects-section" ng-controller="ProjectsControllerController">
+<section class="projects-section" ng-controller="ProjectsControllerController as projectVm">
 	<md-content layout-padding>
         <md-toolbar>
             <div layout="row" layout-align="space-around center" flex>
-                <md-radio-group class="project-radios" ng-model="radios" layout="row" flex="100">
+                <md-radio-group class="project-radios" ng-model="projectVm.radios" layout="row" flex="100">
                     <div flex="33" class="project-categories">
                         <md-radio-button value="sidePro" aria-label="Side Projects">
                             <label>Side Projects</label>
@@ -22,52 +22,52 @@
             </div>
         </md-toolbar>
         <span flex></span>
-		<md-grid-list class="projects-grid" md-cols-gt-sm="5" md-cols-sm="3" md-row-height="2:2" md-gutter-gt-sm="12px" md-gutter="4px" ng-show="radios === 'sidePro'">
-            <md-grid-tile class="my-dash-tile project-tile" md-rowspan="1" md-colspan="1" ng-click="openGallery(proj.dash)">
+		<md-grid-list class="projects-grid" md-cols-gt-sm="5" md-cols-sm="3" md-row-height="2:2" md-gutter-gt-sm="12px" md-gutter="4px" ng-show="projectVm.radios === 'sidePro'">
+            <md-grid-tile class="my-dash-tile project-tile" md-rowspan="1" md-colspan="1" ng-click="openGallery(projectVm.proj.dash)">
                 <md-grid-tile-footer>
                     <h3>My Dash</h3>
                 </md-grid-tile-footer>
             </md-grid-tile>
-            <md-grid-tile class="lassos-tile project-tile" md-rowspan="1" md-colspan="1" ng-click="openGallery(proj.lassos)">
+            <md-grid-tile class="lassos-tile project-tile" md-rowspan="1" md-colspan="1" ng-click="openGallery(projectVm.proj.lassos)">
                 <md-grid-tile-footer>
                     <h3>Texas Lassos Alumni Connect</h3>
                 </md-grid-tile-footer>
             </md-grid-tile>
-            <md-grid-tile class="rr-tile project-tile" md-rowspan="1" md-colspan="1" ng-click="openGallery(proj.rr)">
+            <md-grid-tile class="rr-tile project-tile" md-rowspan="1" md-colspan="1" ng-click="openGallery(projectVm.proj.rr)">
                 <md-grid-tile-footer>
                     <h3>Restaurant Roulette</h3>
                 </md-grid-tile-footer>
             </md-grid-tile>
-            <md-grid-tile class="toolbox-tile project-tile" md-rowspan="1" md-colspan="1" ng-click="openGallery(proj.toolbox)">
+            <md-grid-tile class="toolbox-tile project-tile" md-rowspan="1" md-colspan="1" ng-click="openGallery(projectVm.proj.toolbox)">
                 <md-grid-tile-footer>
                     <h3>Toolbox</h3>
                 </md-grid-tile-footer>
             </md-grid-tile>
-            <md-grid-tile class="port-tile project-tile" md-rowspan="1" md-colspan="1" ng-click="openGallery(proj.portfolio)">
+            <md-grid-tile class="port-tile project-tile" md-rowspan="1" md-colspan="1" ng-click="openGallery(projectVm.proj.portfolio)">
                 <md-grid-tile-footer>
                     <h3>Portfolio</h3>
                 </md-grid-tile-footer>
             </md-grid-tile>
         </md-grid-list>
-        <md-grid-list class="projects-grid" md-cols-gt-sm="5" md-cols-sm="3" md-row-height="2:2" md-gutter-gt-sm="12px" md-gutter="4px" ng-show="radios === 'ndaPro'">
+        <md-grid-list class="projects-grid" md-cols-gt-sm="5" md-cols-sm="3" md-row-height="2:2" md-gutter-gt-sm="12px" md-gutter="4px" ng-show="projectVm.radios === 'ndaPro'">
             <!--<md-grid-tile></md-grid-tile>-->
-            <md-grid-tile class="nda-tile project-tile" md-rowspan="1" md-colspan="1" ng-click="openGallery(proj.host)">
+            <md-grid-tile class="nda-tile project-tile" md-rowspan="1" md-colspan="1" ng-click="openGallery(projectVm.proj.host)">
                 <md-grid-tile-footer>
                     <h3>Host Reports</h3>
                 </md-grid-tile-footer>
             </md-grid-tile>
-            <md-grid-tile class="nda-tile project-tile" md-rowspan="1" md-colspan="1" ng-click="openGallery(proj.roms)">
+            <md-grid-tile class="nda-tile project-tile" md-rowspan="1" md-colspan="1" ng-click="openGallery(projectVm.proj.roms)">
                 <md-grid-tile-footer>
                     <h3>WebROMS</h3>
                 </md-grid-tile-footer>
             </md-grid-tile>
-            <md-grid-tile class="nda-tile project-tile" md-rowspan="1" md-colspan="1" ng-click="openGallery(proj.elcc)">
+            <md-grid-tile class="nda-tile project-tile" md-rowspan="1" md-colspan="1" ng-click="openGallery(projectVm.proj.elcc)">
                 <md-grid-tile-footer>
                     <h3>ELCC</h3>
                 </md-grid-tile-footer>
             </md-grid-tile>
         </md-grid-list>
-        <md-card class="other-projects" ng-show="radios === 'otherPro'">
+        <md-card class="other-projects" ng-show="projectVm.radios === 'otherPro'">
             <h2>Hover over a project name to see some information or click it to see the source on GitHub:</h2>
             <br>
             <div class="op-area"></div>

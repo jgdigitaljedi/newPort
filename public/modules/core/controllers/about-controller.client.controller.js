@@ -2,11 +2,10 @@
 
 angular.module('core').controller('AboutControllerController', ['$scope', '$http', '$compile',
 	function($scope, $http, $compile) {
-		$scope.showloader = true;
-        $scope.showLastfm = true;
+		var aboutVm = this;
+        aboutVm.showLastfm = true;
 
 		function makeLastFmWidget(result) {
-			$scope.showloader = false;
 			for(var i = 0; i < 5; i++) {
 				var artistWeb = result[i].artist['#text'].split(' ').join('+'),
 					nameWeb = result[i].name.split(' ').join('+'),

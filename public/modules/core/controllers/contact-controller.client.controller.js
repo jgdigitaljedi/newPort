@@ -3,7 +3,8 @@
 angular.module('core').controller('ContactControllerController', ['$scope', '$http', '$mdDialog',
 	function($scope, $http, $mdDialog) {
 		// TODO: fix success and failure modals and add loading animation while sending
-		$scope.sendEmail = function(user) {
+		var contactVm = this;
+		contactVm.sendEmail = function(user) {
 			$http.post('/contact', {
 				firstName: user.firstName,
 				email: user.email,
@@ -47,7 +48,6 @@ angular.module('core').controller('ContactControllerController', ['$scope', '$ht
 			$scope.closeDialog = function() {
 				$mdDialog.hide();
 			};
-		};
-		
+		};		
 	}
 ]);

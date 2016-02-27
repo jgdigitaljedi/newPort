@@ -4,8 +4,9 @@
 angular.module('core').controller('ProjectsControllerController', ['$scope', '$mdDialog', '$timeout', '$http', '$compile', '$window',
 	function($scope, $mdDialog, $timeout, $http, $compile, $window) {
         // TODO: make modals more responsive an look better
-		$scope.radios = 'sidePro';
-		$scope.proj = {
+        var projectVm = this;
+		projectVm.radios = 'sidePro';
+		projectVm.proj = {
 			dash: {
 				title: 'My Dash',
                 images: ['../../assets/images/dash/dash-gallery-1.png', '../../assets/images/dash/dash-gallery-2.png', '../../assets/images/dash/dash-gallery-3.png',

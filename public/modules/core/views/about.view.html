@@ -1,4 +1,4 @@
-<section class="about-section" ng-controller="AboutControllerController">
+<section class="about-section" ng-controller="AboutControllerController as aboutVm">
 	<div layout="column" layout-align="start center">
 		<div layout="row" layout layout-align="center center">
 			<img src="assets/images/large_619034.png" class="pics-of-me fade-in" />
@@ -15,7 +15,7 @@
 
 		</div>
 	</div>
-	<div class="last-fm-section" layout="row" layout-align="center end" ng-show="showLastfm">
+	<div class="last-fm-section" layout="row" layout-align="center end" ng-show="aboutVm.showLastfm">
         <div class="last-card">
             <span><em>Last 5 songs I've listened to (hover for info)...</em></span>
             <div id="lastfm-widget"></div>
