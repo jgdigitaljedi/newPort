@@ -691,9 +691,11 @@ input:-webkit-autofill {
   cursor: pointer;
 }
 .projects-gallery .gallery-area .photo-area .big-pic {
-  max-width: 600px;
+  object-fit: contain;
+  height: auto;
+  max-width: 720px;
   max-height: 600px;
-  width: 97%;
+  width: 98%;
   opacity: 0;
 }
 .projects-gallery .gallery-area .photo-area .fade-in {
@@ -970,9 +972,11 @@ body {
   cursor: pointer;
 }
 .projects-gallery .gallery-area .photo-area .big-pic {
-  max-width: 600px;
+  object-fit: contain;
+  height: auto;
+  max-width: 720px;
   max-height: 600px;
-  width: 97%;
+  width: 98%;
   opacity: 0;
 }
 .projects-gallery .gallery-area .photo-area .fade-in {
