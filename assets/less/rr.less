@@ -1,0 +1,50 @@
+#rr-section {
+	background: 
+		linear-gradient(
+	      rgba(21, 101, 192, 0.75), 
+	      rgba(21, 101, 192, 0.75)
+	    )
+		,url('../../../assets/images/restaurant_icons.png') repeat;
+
+	.rr-title {
+		font-size: 6em;
+	  font-family: 'langdon';
+	  margin: 6px auto;
+	}
+	.restaurant {
+	  transform: translateX(-500%);
+    -webkit-transform: translateX(-500%);
+    animation-delay:	0.3s;
+	}
+
+	.roulette {
+		transform: translateX(500%);
+    -webkit-transform: translateX(500%);
+    animation-delay:	0.6s;
+	}
+
+	.rr-title:first-of-type {
+		margin-top: 100px;
+	}
+
+	.tilted-remix {
+		font-family: 'depressionist';
+		font-size: 4em;
+		transform: rotate(-10deg);
+		color: #455A64;
+		margin-top: 0;
+	}
+}
+
+.slide-in {
+    animation: slide-in 1s forwards;
+    -webkit-animation: slide-in 1s forwards;
+}
+
+@keyframes slide-in {
+    100% { transform: translateX(0%); }
+}
+
+@-webkit-keyframes slide-in {
+    100% { -webkit-transform: translateX(0%); }
+}

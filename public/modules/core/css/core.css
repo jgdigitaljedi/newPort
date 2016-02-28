@@ -528,10 +528,57 @@ input:-webkit-autofill {
   margin-left: auto;
   margin-right: auto;
 }
+#rr-section {
+  background: linear-gradient(rgba(21, 101, 192, 0.75), rgba(21, 101, 192, 0.75)), url('../../../assets/images/restaurant_icons.png') repeat;
+}
+#rr-section .rr-title {
+  font-size: 6em;
+  font-family: 'langdon';
+  margin: 6px auto;
+}
+#rr-section .restaurant {
+  transform: translateX(-500%);
+  -webkit-transform: translateX(-500%);
+  animation-delay: 0.3s;
+}
+#rr-section .roulette {
+  transform: translateX(500%);
+  -webkit-transform: translateX(500%);
+  animation-delay: 0.6s;
+}
+#rr-section .rr-title:first-of-type {
+  margin-top: 100px;
+}
+#rr-section .tilted-remix {
+  font-family: 'depressionist';
+  font-size: 4em;
+  transform: rotate(-10deg);
+  color: #455A64;
+  margin-top: 0;
+}
+.slide-in {
+  animation: slide-in 1s forwards;
+  -webkit-animation: slide-in 1s forwards;
+}
+@keyframes slide-in {
+  100% {
+    transform: translateX(0%);
+  }
+}
+@-webkit-keyframes slide-in {
+  100% {
+    -webkit-transform: translateX(0%);
+  }
+}
 @font-face {
   font-family: 'langdon';
   src: url('../../core/assets/fonts/langdon-webfont.eot');
   src: url('../../core/assets/fonts/langdon-webfont.eot?#iefix') format('embedded-opentype'), url('../../core/assets/fonts/langdon-webfont.woff') format('woff'), url('../../core/assets/fonts/langdon-webfont.ttf') format('truetype'), url('../../core/assets/fonts/langdon-webfont.svg#Langdon') format('svg');
+}
+@font-face {
+  font-family: 'depressionist';
+  src: url('../../rr/assets/fonts/depressionist_3_revisited_2010-webfont.eot');
+  src: url('../../rr/assets/fonts/depressionist_3_revisited_2010-webfont.eot?#iefix') format('embedded-opentype'), url('../../rr/assets/fonts/depressionist_3_revisited_2010-webfont.woff') format('woff'), url('../../rr/assets/fonts/depressionist_3_revisited_2010-webfont.ttf') format('truetype'), url('../../rr/assets/fonts/depressionist_3_revisited_2010-webfont.svg#Depressionist') format('svg');
 }
 body {
   font-family: 'Exo', sans-serif;
