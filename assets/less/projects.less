@@ -120,6 +120,7 @@
     md-toolbar {
       color: #f1f1f1;
       background-color: @blue-gray;
+      .BoxShadowHelper(2);
 
       .project-radios {
         justify-content: space-around;
@@ -135,6 +136,7 @@
       .project-tile {
         background-size: contain;
         cursor: pointer;
+        .BoxShadowHelper(2);
       }
       .my-dash-tile {
         background-image: url('../../../assets/images/dash.png');
@@ -218,6 +220,10 @@
       -o-user-select: none;
       user-select: none;
     }
+
+    .film-square {
+      .BoxShadowHelper(2);
+    }
     .photo-area {
       //max-height: 585px;
 
@@ -254,6 +260,7 @@
       font-size: .9em;
       padding: 12px;
       margin: 0;
+      .BoxShadowHelper(2);
 
       .gallery-head {
         color: @dark-amber;

@@ -100,7 +100,7 @@ module.exports = function(grunt) {
 					paths: []
 				},
 				files: [{
-					src: ['assets/less/*.less', 'public/modules/**/*.less'],
+					src: ['assets/less/main.less', 'public/modules/**/main.less'],
 					dest: 'public/modules/core/css/core.css'
 				}]
       		},
@@ -109,7 +109,7 @@ module.exports = function(grunt) {
               		paths: []
           		},
           		files: [{
-              		src: ['assets/less/*.less', 'public/modules/**/*.less'],
+              		src: ['assets/less/main.less', 'public/modules/**/main.less'],
               		dest: 'public/dist/core.css'
           		}]
       		}

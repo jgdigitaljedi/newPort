@@ -64,7 +64,7 @@ angular.module('core').factory('Dataobjects', [
                 'string is then read aloud to me over my truck\s stereo so I know what to expect my commute to be like. I am also working on integrating a call to my calendar to read back my ' +
                 'events for the day as well. I have more plans for the server too, but time is greatest my obstacle. \n \n TLDR: I am doing some cool things with this server I have setup!',
                 github: 'https://github.com/jgdigitaljedi/newPort',
-                techs: 'MongoDB, ExpressJS, AngularJS, NodeJS, Angular Material, MomentJS, Nodemailer',
+                techs: 'MongoDB, ExpressJS, AngularJS, NodeJS, Angular Material, MomentJS, Nodemailer, d3',
                 apis: 'Weather Underground, Last.fm, Bing Maps, GitHub'
             },
             host: {

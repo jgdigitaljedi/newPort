@@ -9,3 +9,10 @@ exports.index = function(req, res) {
 		request: req
 	});
 };
+
+exports.rr = function(req, res) {
+	res.render('rr', {
+		user: req.user || null,
+		request: req
+	});
+};
