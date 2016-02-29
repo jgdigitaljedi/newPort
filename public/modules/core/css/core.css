@@ -530,6 +530,7 @@ input:-webkit-autofill {
 }
 #rr-section {
   background: linear-gradient(rgba(21, 101, 192, 0.75), rgba(21, 101, 192, 0.75)), url('../../../assets/images/restaurant_icons.png') repeat;
+  overflow-x: hidden;
 }
 #rr-section .rr-title {
   font-size: 6em;
@@ -555,6 +556,43 @@ input:-webkit-autofill {
   transform: rotate(-10deg);
   color: #455A64;
   margin-top: 0;
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  animation-delay: 2s;
+}
+#rr-section .welcome-card {
+  width: 400px;
+  height: 200px;
+  background: #f1f1f1;
+  color: #455A64;
+  -webkit-animation-delay: 2.3s;
+  -moz-animation-delay: 2.3s;
+  animation-delay: 2.3s;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+.fade-in {
+  opacity: 0;
+  -webkit-animation: appear ease-in 1;
+  -moz-animation: appear ease-in 1;
+  animation: appear ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s;
+}
+.show {
+  opacity: 0;
+  -webkit-animation: appear ease-in 1;
+  -moz-animation: appear ease-in 1;
+  animation: appear ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: .1s;
+  -moz-animation-duration: .1s;
+  animation-duration: .1s;
 }
 .slide-in {
   animation: slide-in 1s forwards;
@@ -568,6 +606,30 @@ input:-webkit-autofill {
 @-webkit-keyframes slide-in {
   100% {
     -webkit-transform: translateX(0%);
+  }
+}
+@-webkit-keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 @font-face {
