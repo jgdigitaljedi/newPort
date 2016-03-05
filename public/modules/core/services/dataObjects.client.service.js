@@ -8,7 +8,7 @@ angular.module('core').factory('Dataobjects', [
 			dash: {
 				title: 'My Dash',
                 images: ['../../assets/images/dash/dash-gallery-1.png', '../../assets/images/dash/dash-gallery-2.png', '../../assets/images/dash/dash-gallery-3.png',
-                    '../../assets/images/dash/dash-gallery-4.png', '../../assets/images/dash/dash-gallery-5.png', '../../assets/images/dash/dash-gallery-6.png'],
+                    '../../assets/images/dash/dash-gallery-4.png', '../../assets/images/dash/dash-gallery-5.png'],
                 description: 'Get randomized restaurant and bar suggestions, view weather info and radar, track packages, ' +
                 'view phone notifications, and control your HomeJS devices all from one screen! I have not launched this app ' +
                 'because I want to rebuild it with my newly learned superpowers!',
@@ -33,7 +33,7 @@ angular.module('core').factory('Dataobjects', [
             rr: {
                 title: 'Restaurant Roulette',
                 images: ['../../assets/images/rr/rr-gallery-1.png', '../../assets/images/rr/rr-gallery-2.png', '../../assets/images/rr/rr-gallery-3.png', '../../assets/images/rr/rr-gallery-4.png',
-                    '../../assets/images/rr/rr-gallery-5.png', '../../assets/images/rr/rr-gallery-6.png', ],
+                    '../../assets/images/rr/rr-gallery-5.png'],
                 description: 'This app was done during a 2 day hackathon when I was completely new to Angular so I chose to use it as a way to teach myself how it works . It geolocates you via IP address,' +
                 ' gets a list of 30 restaurants near you via the FourSquare API, then randomly selects 2 choices for you providing you with a website link and ' +
                 'Google map for each one. The idea was to take the trouble out of deciding where to eat lunch. I have plans to do a complete rewrite and host it on this server eventually',
