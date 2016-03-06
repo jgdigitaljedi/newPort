@@ -4,7 +4,8 @@
 module.exports = function(app) {
 	var proxy = require('../../app/controllers/proxy.controller'),
         morning = require('../../app/controllers/morning.controller'),
-        yelp = require('../../app/controllers/yelp.controller');
+        yelp = require('../../app/controllers/yelp.controller'),
+        social = require('../../app/controllers/social.controller');
 	app.route('/conditions/:loc').get(proxy.conditions);
 	app.route('/lastfm').get(proxy.lastfm);
 	app.route('/lastart/:band').get(proxy.lastArt);
@@ -13,4 +14,6 @@ module.exports = function(app) {
 	app.route('/mygithub').get(proxy.myGithub);
 	app.route('/afterwork').get(morning.getHomeCommute);
 	app.route('/getYelpInfo/:lat/:long').get(yelp.getYelpInfo);
+	app.route('/steam').get(social.steamInfo);
+	app.route('/games').get(social.steamGames);
 };
