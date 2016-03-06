@@ -1,3 +1,7 @@
-<section class="social-section" ng-controller="SocialController as socialVm">
-
+<section class="social-section" ng-controller="SocialController as socialVm" flex layout="row" layout-align="space-around start">
+	<steam-widget steam-games="socialVm.games" steam-data="socialVm.player"></steam-widget>
+	<div>Evetually a G+ widget</div>
+	<div>Evetually a Twitter widget</div>
+	<div>Evetually a LastFm widget</div>
+	<div>Evetually a YouTube widget</div>
 </section>

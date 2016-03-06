@@ -11,11 +11,12 @@ angular.module('core').controller('SocialController', ['$scope', '$http', 'Socia
 		// TODO: add LastFm stuff
 
 		// steam section
-		Social.getSteam().then(function (response) {
-			socialVm.player = response[0];
-			socialVm.games = response[1];
-			// make a profile widget with owned games underneath
-		});
+		// Social.getSteam().then(function (response) {
+		// 	socialVm.player = response[0];
+		// 	socialVm.games = response[1];
+		// 	console.log('player', response[0]);
+		// 	// make a profile widget with owned games underneath
+		// });
 
 	}
 ]);
